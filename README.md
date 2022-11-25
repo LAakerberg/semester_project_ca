@@ -19,4 +19,6 @@
 
 # Installation of Prettier
 
+npm install --save-dev prettier
+
 # Installation of Cypress
