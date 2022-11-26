@@ -17,6 +17,10 @@
 
 # Installation of ESLint
 
+npm install eslint --save-dev
+
+npx eslint --init
+
 # Installation of Prettier
 
 npm install --save-dev prettier
