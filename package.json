@@ -113,7 +113,15 @@
   },
   "homepage": "https://github.com/LAakerberg/semester_project_ca#readme",
   "lint-staged": {
-    "*.js": "eslint --cache --fix",
-    "*.html": "prettier --write"
+    "*.js": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.html": [
+      "prettier --write"
+    ],
+    "*.scss": [
+      "prettier --write"
+    ]
   }
 }
