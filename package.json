@@ -9,11 +9,14 @@
     "preview": "vite preview",
     "lint": "eslint src/**/*.js",
     "lint-fix": "eslint src/**/*.js --cache --fix",
-    "format": "prettier -w src/**/*.js && prettier -w index.html && prettier -w pages/**/*.html"
+    "format": "prettier -w src/**/*.js && prettier -w index.html && prettier -w pages/**/*.html",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
     "eslint": "^8.28.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.4",
     "postcss": "^8.4.19",
     "prettier": "^2.8.0",
     "tailwindcss": "^3.2.4",
@@ -108,5 +111,9 @@
   "bugs": {
     "url": "https://github.com/LAakerberg/semester_project_ca/issues"
   },
-  "homepage": "https://github.com/LAakerberg/semester_project_ca#readme"
+  "homepage": "https://github.com/LAakerberg/semester_project_ca#readme",
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.html": "prettier --write"
+  }
 }
