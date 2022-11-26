@@ -7,6 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "lint": "eslint src/**/*.js",
+    "lint-fix": "eslint src/**/*.js --cache --fix",
     "format": "prettier -w src/**/*.js && prettier -w index.html && prettier -w pages/**/*.html"
   },
   "devDependencies": {
