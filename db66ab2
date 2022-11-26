@@ -1,0 +1,27 @@
+[33m89acbbf[m[33m ([m[1;36mHEAD -> [m[1;32mdev-branch-eslint[m[33m)[m Testing auto-run prettier/eslint on commit
+[33mdb661b2[m Changed prettier to run before eslint
+[33me4a68a3[m[33m ([m[1;33mtag: v0.0.5[m[33m)[m 0.0.5
+[33m6afa781[m Installation of mrm@2 lint-staged
+[33m16b80c7[m Added ESLint and ESLint fix
+[33m852b252[m Updated README.md with ESLint installation method
+[33m501e466[m[33m ([m[1;33mtag: v0.0.4[m[33m)[m 0.0.4
+[33md3d550a[m installed ESLint
+[33mfbeca5c[m ESLint installation in package
+[33m40f54de[m[33m ([m[1;33mtag: v0.0.3[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/dev-branch[m[33m, [m[1;32mmaster[m[33m, [m[1;32mdev-branch[m[33m)[m 0.0.3
+[33m8c062ea[m SingleQuote is working
+[33mf74b0d5[m Added singleQuote on format
+[33me243d45[m[33m ([m[1;33mtag: v0.0.2[m[33m)[m 0.0.2
+[33m93c0154[m update README.md with prettier installation
+[33m6ac5f51[m testing prettier format command
+[33med0a406[m prettier runs on html/js files with format command
+[33m71603f1[m Remove files that's not in use
+[33m39564d4[m Update package with more information about the installation and project
+[33mfbcbe3d[m update
+[33m98898f1[m Moving all file's from zero_bud folder
+[33m6332dd6[m Added some installation information in the README.md
+[33m5af8a8c[m Testing of tailwind commands
+[33mb2e853b[m Added some test files for running check of tailwindcss
+[33m1f31901[m Installation of tailwind css + postcss
+[33m80bec17[m installed vite bundler
+[33mcb77a47[m Added .gitignore file first
+[33mb9074b4[m Added README.md file
