@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        margin: 0px auto;
+        background-color: #1F2D3B;
+    }
+  }
+
+  @layer components {
+    header, main, footer {
+        width: 100%;
+        margin: 0px auto;
+    }
+  }
+
+  @layer components {
+    .bg-color-nav {
+        background-color: #1F2D3B;
+    }
+  }
+
+  @layer components {
+    .zero-text-color {
+        color: #E6E6E6;
+    }
+  }
+
+  @layer components {
+    nav li {
+        display: inline-block;
+    }
+  }
