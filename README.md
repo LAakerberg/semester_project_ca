@@ -26,3 +26,4 @@ npx eslint --init
 npm install --save-dev prettier
 
 # Installation of Cypress
+
