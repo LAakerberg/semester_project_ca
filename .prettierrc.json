@@ -1,4 +1,3 @@
 {
-  "singleQuote": true,
-  "prettier.htmlWhitespaceSensitivity": "ignore"
+  "singleQuote": true
 }
