@@ -22,6 +22,7 @@
   @layer components {
     .bg-color-nav {
         background-color: #1F2D3B;
+        filter: brightness(100%);
     }
   }
 
@@ -34,5 +35,16 @@
   @layer components {
     nav li {
         display: inline-block;
+    }
+  }
+
+  @layer components {
+    .header-img {
+        background-image: url(/assets/img/head-img.jpg);
+        /*filter: brightness(55%) saturate(140%);*/
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: left;
+        background-position-y: top;
     }
   }
