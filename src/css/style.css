@@ -12,6 +12,45 @@
     }
   }
 
+  @layer base {
+    @font-face {
+      font-family: Acme;
+      font-weight: 500;
+      src: url(/assets/fonts/Acme-Regular.ttf) format("ttf");
+    }
+    @font-face {
+      font-family: Ubuntu;
+      font-weight: 500;
+      src: url(/assets/fonts/Ubuntu-Regular.ttf) format("ttf");
+    }
+    @font-face {
+      font-family: Niramit;
+      font-weight: 500;
+      src: url(/assets/fonts/Niramit-Regular.ttf) format("ttf");
+    }
+  }
+
+  @layer base {
+    .zero-font-style-1 {
+      font-family: Acme;
+      text-transform: uppercase;
+    }
+  }
+
+  @layer base {
+    .zero-font-style-2 {
+      font-family: Ubuntu;
+      text-transform: uppercase;
+    }
+  }
+
+  @layer base {
+    .zero-font-style-3 {
+      font-family: Niramit;
+      font-size: 1rem;
+    }
+  }
+
   @layer components {
     header, main, footer {
         width: 100%;
