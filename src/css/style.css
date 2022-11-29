@@ -39,6 +39,7 @@
     .zero-font-style-1 {
       font-family: Acme;
       text-transform: uppercase;
+      font-size: 1.2rem;
     }
   }
 
@@ -52,7 +53,7 @@
   @layer base {
     .zero-font-style-3 {
       font-family: Niramit;
-      font-size: 1rem;
+      font-size: 0.9rem;
     }
   }
 
