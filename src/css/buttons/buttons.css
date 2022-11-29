@@ -1,0 +1,16 @@
+/* components/buttons.css */
+.btn-signUp {
+    background-color: #21374D;
+    color: #DE910B;
+    border: 1px solid #DE910B;
+    border-radius: 5px;
+    padding: 3px 12px 3px 12px;
+    text-transform: uppercase;
+    transition: 0.5s;
+  }
+
+  .btn-signUp:hover {
+    background-color: #DE910B;
+    color: #21374D;
+    transition: 0.5s;
+  }
