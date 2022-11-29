@@ -18,6 +18,7 @@
     "husky": "^8.0.2",
     "lint-staged": "^13.0.4",
     "postcss": "^8.4.19",
+    "postcss-import": "^15.0.0",
     "prettier": "^2.8.0",
     "tailwindcss": "^3.2.4",
     "vite": "^3.2.3"
@@ -71,7 +72,6 @@
     "picocolors": "^1.0.0",
     "picomatch": "^2.3.1",
     "pify": "^2.3.0",
-    "postcss-import": "^14.1.0",
     "postcss-js": "^4.0.0",
     "postcss-load-config": "^3.1.4",
     "postcss-nested": "^6.0.0",
