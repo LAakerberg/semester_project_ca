@@ -1,5 +1,6 @@
 /* components/buttons.css */
-.btn-signUp {
+
+.btn-secondary {
     background-color: #21374D;
     color: #DE910B;
     border: 1px solid #DE910B;
@@ -7,10 +8,44 @@
     padding: 3px 12px 3px 12px;
     text-transform: uppercase;
     transition: 0.5s;
-  }
+}
 
-  .btn-signUp:hover {
+.btn-secondary:hover {
     background-color: #DE910B;
     color: #21374D;
     transition: 0.5s;
+  }
+
+.btn-primary {
+    background-color: #DE910B;
+    color: #21374D;
+    border: 1px solid #21374D;
+    border-radius: 5px;
+    padding: 3px 12px 3px 12px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.btn-primary:hover {
+    background-color: #21374D;
+    color: #DE910B;
+    border: 1px solid #DE910B;
+    transition: 0.5s;
+  }
+
+  input {
+    background-color: #21374D;
+    border: 1px solid #DE910B;
+    border-radius: 10px;
+    padding: 6px;
+    width: 180px;
+    transition: 1s;
+    font-size: 0.8rem;
+  }
+
+  input:focus-visible {
+    border: 3px solid #DE910B;
+    border-radius: 10px;
+    width: 220px;
+    transition: 1s;
   }
