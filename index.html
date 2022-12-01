@@ -3,15 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/src/js/index.js" type="module" defer></script>
     <link href="/src/css/style.css" rel="stylesheet" />
     <!--<script src="main.js" type="module" defer></script>-->
   </head>
-  <body class="w-screen">
-    <header class="h-96 max-h-96">
+  <body class="w-screen zero-text-color">
+    <!-- Header -->
+    <header class="h-96 max-h-96 zero-font-niramit">
       <div class="header-img static h-96 max-h-96">
         <div
           class="bg-color-nav opacity-95 h-16 max-h-16 absolute w-full place-content-center"
         >
+          <!-- Navigation section-->
           <nav
             class="h-16 zero-text-color w-4/5 m-auto p-0 text-center flex place-content-center"
           >
@@ -34,12 +37,13 @@
               </ul>
             </div>
             <div class="flex-shrink w-52 m-auto zero-font-style-1">
-              <button class="btn-secondary mr-1">Log in</button>
+              <button class="btn-secondary mr-1" id="loginBtn">Log in</button>
               <button class="btn-primary ml-1">Sign UP</button>
             </div>
           </nav>
         </div>
-        <div class="zero-text-color absolute top-20 left-16">
+        <!-- Header with information text -->
+        <div class="absolute top-20 left-16">
           <h1 class="zero-font-ubuntu text-4xl uppercase">
             Welcome to ZERO-BUD
           </h1>
@@ -48,7 +52,7 @@
           >
         </div>
         <div
-          class="bg-slate-600/80 border border-sky-600 w-96 rounded-lg zero-text-color absolute top-44 right-16 p-4"
+          class="bg-slate-700/90 border border-sky-600 w-96 rounded-lg absolute top-44 right-16 p-4"
         >
           <h1 class="zero-font-ubuntu text-3xl">Find your next game</h1>
           <span class="zero-font-ubunt text-sm"
@@ -59,15 +63,136 @@
         </div>
       </div>
     </header>
+    <!-- End of header -->
+    <!-- Main body-->
 
-    <main class="text-white zero-font-style-3 p-3">
-      Main Content. Lorem Ipsum is simply dummy text of the printing and
-      typesetting industry. Lorem Ipsum has been the industry's standard dummy
-      text ever since the 1500s, when an unknown printer took a galley of type
-      and scrambled it to make a type specimen book. It has survived not only
-      five centuries, but also the leap into electronic typesetting,
+    <main class="flex flex-col p-3 w-5/6 zero-font-niramit">
+      <!-- Login & sign in modal -->
+      <div class="relative z-10 hidden" id="loginModal">
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity">
+          <div class="fixed inset-0 overflow-hidden">
+            <div class="absolute inset-0 overflow-hidden">
+              <div
+                class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10"
+              >
+                <!--
+                  Slide-over panel, show/hide based on slide-over state.
+        
+                  Entering: "transform transition ease-in-out duration-500 sm:duration-700"
+                    From: "translate-x-full"
+                    To: "translate-x-0"
+                  Leaving: "transform transition ease-in-out duration-500 sm:duration-700"
+                    From: "translate-x-0"
+                    To: "translate-x-full"
+                -->
+                <div class="pointer-events-auto relative w-screen max-w-md">
+                  <!--
+                    Close button, show/hide based on slide-over state.
+        
+                    Entering: "ease-in-out duration-500"
+                      From: "opacity-0"
+                      To: "opacity-100"
+                    Leaving: "ease-in-out duration-500"
+                      From: "opacity-100"
+                      To: "opacity-0"
+                  -->
+                  <div
+                    class="absolute top-0 left-0 -ml-8 flex pt-4 pr-2 sm:-ml-10 sm:pr-4"
+                  >
+                    <button
+                      id="close"
+                      type="button"
+                      class="rounded-md text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
+                    >
+                      <span class="sr-only">Close panel</span>
+                      <!-- Heroicon name: outline/x-mark -->
+                      <svg
+                        class="h-6 w-6"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M6 18L18 6M6 6l12 12"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+
+                  <div
+                    class="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl"
+                  >
+                    <div class="px-4 sm:px-6">
+                      <h2
+                        class="text-lg font-medium text-gray-900"
+                        id="slide-over-title"
+                      >
+                        Panel title
+                      </h2>
+                    </div>
+                    <div class="relative mt-6 flex-1 px-4 sm:px-6">
+                      <!-- Replace with your content -->
+                      <div class="absolute inset-0 px-4 sm:px-6">
+                        <div
+                          class="h-full border-2 border-dashed border-gray-200"
+                          aria-hidden="true"
+                        ></div>
+                      </div>
+                      <!-- /End replace -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of login & sign in modal -->
+      <!-- Section with the latest news -->
+      <section>
+        <div class="py-4">Latest news</div>
+        <div class="flex flex-col gap-2">
+          <div
+            class="bg-slate-700/90 border border-sky-600 w-full rounded-t-lg p-2 text-lg"
+          >
+            Find your next game
+          </div>
+          <div
+            class="bg-slate-700/90 border border-sky-600 w-full rounded-b-lg p-2"
+          >
+            <div>
+              <p>
+                Main Content. Lorem Ipsum is simply dummy text of the printing
+                and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type
+                specimen book. It has survived not only five centuries, but also
+                the leap into electronic typesetting
+              </p>
+
+              <p>
+                Main Content. Lorem Ipsum is simply dummy text of the printing
+                and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type
+                specimen book. It has survived not only five centuries, but also
+                the leap into electronic typesetting
+              </p>
+            </div>
+            <div class="p-1">Tags</div>
+          </div>
+        </div>
+      </section>
+      <!-- Section with information about the site -->
+      <section></section>
     </main>
-
+    <!-- End of Main body-->
+    <!-- Footer in the bottom-->
     <footer class="">My footer</footer>
   </body>
 </html>
