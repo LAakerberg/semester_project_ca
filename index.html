@@ -23,7 +23,7 @@
             </div>
             <div class="flex-shrink w-64 m-auto">
               <input
-                type="text"
+                type="search"
                 class="focus:outline-none"
                 placeholder="Search for you next game..."
               />
@@ -66,9 +66,9 @@
     <!-- End of header -->
     <!-- Main body-->
 
-    <main class="flex flex-col p-3 w-5/6 zero-font-niramit">
+    <main class="flex flex-col p-3 items-center zero-font-niramit">
       <!-- Login & sign in modal -->
-      <div class="relative z-10 hidden" id="loginModal">
+      <div class="relative z-10 hidden transition-all" id="loginModal">
         <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity">
           <div class="fixed inset-0 overflow-hidden">
             <div class="absolute inset-0 overflow-hidden">
@@ -125,23 +125,53 @@
                   </div>
 
                   <div
-                    class="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl"
+                    class="flex h-full flex-col overflow-y-scroll bg-color-nav py-6 shadow-xl"
                   >
                     <div class="px-4 sm:px-6">
                       <h2
-                        class="text-lg font-medium text-gray-900"
+                        class="text-lg font-medium text-gray-300"
                         id="slide-over-title"
                       >
-                        Panel title
+                        Login
                       </h2>
                     </div>
                     <div class="relative mt-6 flex-1 px-4 sm:px-6">
-                      <!-- Replace with your content -->
-                      <div class="absolute inset-0 px-4 sm:px-6">
+                      <div class="flex-shrink w-64 m-auto">
                         <div
-                          class="h-full border-2 border-dashed border-gray-200"
-                          aria-hidden="true"
-                        ></div>
+                          class="absolute inset-0 px-4 sm:px-6 text-gray-300"
+                        >
+                          <div
+                            class="h-auto border-2 border-dashed border-gray-200 p-2"
+                            aria-hidden="true"
+                          >
+                            <!-- Form -->
+                            <form action="">
+                              <div class="flex flex-col gap-2 items-center">
+                                <div class="flex-1 w-5/6 items-center">
+                                  <input
+                                    type="name"
+                                    class="focus:outline-none w-full"
+                                    placeholder="Username"
+                                  />
+                                </div>
+                                <div class="flex-1 w-5/6">
+                                  <input
+                                    type="password"
+                                    class="focus:outline-none w-full"
+                                    placeholder="Password"
+                                  />
+                                </div>
+                                <button
+                                  class="btn-secondary mr-1 zero-font-style-1 items-start"
+                                  id=""
+                                >
+                                  Log in
+                                </button>
+                              </div>
+                            </form>
+                            <!-- Form END-->
+                          </div>
+                        </div>
                       </div>
                       <!-- /End replace -->
                     </div>
@@ -154,7 +184,7 @@
       </div>
       <!-- End of login & sign in modal -->
       <!-- Section with the latest news -->
-      <section>
+      <section class="md:w-5/6 lg:w-4/6 m-0 p-0">
         <div class="py-4">Latest news</div>
         <div class="flex flex-col gap-2">
           <div
@@ -189,7 +219,7 @@
         </div>
       </section>
       <!-- Section with information about the site -->
-      <section></section>
+      <section class="md:w-5/6 lg:w-4/6">s</section>
     </main>
     <!-- End of Main body-->
     <!-- Footer in the bottom-->
