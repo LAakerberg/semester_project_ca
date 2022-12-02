@@ -33,7 +33,7 @@
     transition: 0.5s;
   }
 
-  input {
+  input[type=search] {
     background-color: #21374D;
     border: 1px solid #DE910B;
     border-radius: 10px;
@@ -43,9 +43,40 @@
     font-size: 0.8rem;
   }
 
-  input:focus-visible {
+  input[type=search]:focus-visible {
     border: 3px solid #DE910B;
     border-radius: 10px;
     width: 220px;
+    transition: 1s;
+  }
+
+  input[type=name] {
+    background-color: #21374D;
+    border: 1px solid #DE910B;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 6px;
+    font-size: 0.8rem;
+  }
+
+  input[type=name]:focus-visible {
+    border: 3px solid #DE910B;
+    border-radius: 10px;
+    transition: 1s;
+  }
+
+  input[type=password] {
+    background-color: #21374D;
+    border: 1px solid #DE910B;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 6px;
+    transition: 1s;
+    font-size: 0.8rem;
+  }
+
+  input[type=password]:focus-visible {
+    border: 3px solid #DE910B;
+    border-radius: 10px;
     transition: 1s;
   }
