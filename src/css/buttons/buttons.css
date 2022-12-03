@@ -50,7 +50,7 @@
     transition: 1s;
   }
 
-  input[type=name] {
+  input[type=name], [type=email], [type=url] {
     background-color: #21374D;
     border: 1px solid #DE910B;
     border-radius: 10px;
@@ -59,7 +59,7 @@
     font-size: 0.8rem;
   }
 
-  input[type=name]:focus-visible {
+  input[type=name]:focus-visible, [type=email]:focus-visible, [type=url]:focus-visible {
     border: 3px solid #DE910B;
     border-radius: 10px;
     transition: 1s;
