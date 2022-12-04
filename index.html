@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="/src/js/index.js" type="module" defer></script>
+    <script src="/src/js/api/index.js" type="module" defer></script>
     <link href="/src/css/style.css" rel="stylesheet" />
     <!--<script src="main.js" type="module" defer></script>-->
   </head>
@@ -168,10 +169,11 @@
                             aria-hidden="true"
                           >
                             <!-- Form -->
-                            <form class="login-form" action="">
+                            <form class="" id="login-form" action="">
                               <div class="flex flex-col gap-2 items-center">
                                 <div class="flex-1 w-5/6 items-center">
                                   <input
+                                    id="login-name"
                                     type="name"
                                     class="focus:outline-none w-full"
                                     placeholder="Username"
@@ -179,14 +181,16 @@
                                 </div>
                                 <div class="flex-1 w-5/6">
                                   <input
+                                    id="login-pwd"
                                     type="password"
                                     class="focus:outline-none w-full"
                                     placeholder="Password"
                                   />
                                 </div>
                                 <button
+                                  type="submit"
                                   class="btn-secondary mr-1 zero-font-style-1 items-start"
-                                  id=""
+                                  id="login-btn"
                                 >
                                   Log in
                                 </button>
@@ -347,12 +351,12 @@
       <!-- End of login & sign in modal -->
       <!-- Section with the latest news -->
       <section class="md:w-5/6 lg:w-4/6 m-0 p-0">
-        <div class="py-4">Latest news</div>
+        <div class="py-4"><h2 class="text-2xl">Latest news</h2></div>
         <div class="flex flex-col gap-2">
           <div
-            class="bg-slate-700/90 border border-sky-600 w-full rounded-t-lg p-2 text-lg"
+            class="bg-slate-700/90 border border-sky-600 w-full rounded-t-lg p-2"
           >
-            Find your next game
+            <h3 class="text-xl">Find your next game</h3>
           </div>
           <div
             class="bg-slate-700/90 border border-sky-600 w-full rounded-b-lg p-2"
@@ -383,12 +387,12 @@
       <!-- Section with information about the site -->
       <!-- Section with the latest news -->
       <section class="md:w-5/6 lg:w-4/6 m-0 p-0">
-        <div class="py-4">Latest news</div>
+        <div class="py-4"></div>
         <div class="flex flex-col gap-2">
           <div
-            class="bg-slate-700/90 border border-sky-600 w-full rounded-t-lg p-2 text-lg"
+            class="bg-slate-700/90 border border-sky-600 w-full rounded-t-lg p-2"
           >
-            Find your next game
+            <h3 class="text-xl">Find your next game</h3>
           </div>
           <div
             class="bg-slate-700/90 border border-sky-600 w-full rounded-b-lg p-2"
@@ -419,12 +423,12 @@
       <!-- Section with information about the site -->
       <!-- Section with the latest news -->
       <section class="md:w-5/6 lg:w-4/6 m-0 p-0">
-        <div class="py-4">Latest news</div>
+        <div class="py-4"></div>
         <div class="flex flex-col gap-2">
           <div
-            class="bg-slate-700/90 border border-sky-600 w-full rounded-t-lg p-2 text-lg"
+            class="bg-slate-700/90 border border-sky-600 w-full rounded-t-lg p-2"
           >
-            Find your next game
+            <h3 class="text-xl">Find your next game</h3>
           </div>
           <div
             class="bg-slate-700/90 border border-sky-600 w-full rounded-b-lg p-2"
