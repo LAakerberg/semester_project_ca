@@ -28,5 +28,3 @@ window.onclick = function (event) {
     modal.style.display = 'none';
   }
 };
-
-console.log(' Internal ERROR ');
