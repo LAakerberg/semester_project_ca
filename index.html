@@ -13,11 +13,33 @@
     <header class="h-96 max-h-96 zero-font-niramit">
       <div class="header-img static h-96 max-h-96">
         <div
-          class="bg-color-nav opacity-95 h-16 max-h-16 absolute w-full place-content-center"
+          class="flex flex-row bg-color-nav opacity-95 h-16 max-h-16 absolute w-full place-content-center"
         >
+          <div class="flex-shrink w-36 m-auto text-center">
+            <p class="zero-font-style-1">ZERO BUD</p>
+          </div>
+          <div class="flex-shrink m-auto inline-flex hidden">
+            <ul class="zero-font-style-1 inline-flex">
+              <li class="px-1">Home</li>
+              <li class="px-1">Products</li>
+              <li class="px-1">About</li>
+              <li class="px-1">Contact</li>
+            </ul>
+            <div class="flex-shrink w-64 m-auto">
+              <input
+                type="search"
+                class="focus:outline-none"
+                placeholder="Search for you next game..."
+              />
+            </div>
+          </div>
+          <div class="flex-shrink w-52 m-auto zero-font-style-1">
+            <button class="btn-secondary mr-1" id="loginBtn">Log in</button>
+            <button class="btn-primary ml-1" id="registerBtn">Sign UP</button>
+          </div>
           <!-- Navigation section-->
           <nav
-            class="h-16 zero-text-color w-4/5 m-auto p-0 text-center flex place-content-center"
+            class="h-16 zero-text-color w-4/5 m-auto p-0 text-center flex place-content-center hidden"
           >
             <div class="flex-shrink w-36 m-auto zero-font-style-1">
               <p>ZERO BUD</p>
@@ -33,9 +55,7 @@
               <ul class="zero-font-style-1">
                 <li class="px-1">Home</li>
                 <li class="px-1">Products</li>
-
                 <li class="px-1">About</li>
-
                 <li class="px-1">Contact</li>
               </ul>
             </div>
@@ -48,7 +68,7 @@
         <!-- Header with information text -->
         <div class="absolute top-20 left-16">
           <h1 class="zero-font-ubuntu text-4xl uppercase">
-            Welcome to ZERO-BUD Welcome to ZERO-BUD
+            Welcome to ZERO-BUD
           </h1>
           <span class="zero-font-ubunt text-lg pl-8 uppercase"
             >For gamers By gamers...</span
