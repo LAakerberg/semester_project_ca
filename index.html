@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="/src/js/index.js" type="module" defer></script>
     <script src="/src/js/api/index.js" type="module" defer></script>
+    <meta
+      name="description"
+      content="Zero Bud - Your auction house for all games"
+    />
     <link href="/src/css/style.css" rel="stylesheet" />
-    <!--<script src="main.js" type="module" defer></script>-->
+    <title>Zero Bud | Find your games</title>
   </head>
 
   <body class="zero-text-color">
@@ -289,11 +293,12 @@
                             aria-hidden="true"
                           >
                             <!-- Form -->
-                            <form class="register-form" action="">
+                            <form id="register-form" action="">
                               <div class="flex flex-col gap-2 items-center">
                                 <div class="flex-1 w-5/6 items-center">
                                   <label for="name">Enter your name:</label>
                                   <input
+                                    id="register-name"
                                     type="name"
                                     class="focus:outline-none w-full"
                                     placeholder="Your name"
@@ -302,6 +307,7 @@
                                 <div class="flex-1 w-5/6">
                                   <label for="email">Enter your email:</label>
                                   <input
+                                    id="register-email"
                                     type="email"
                                     class="focus:outline-none w-full"
                                     placeholder="Your email"
@@ -312,6 +318,7 @@
                                     >Enter your profile image URL:</label
                                   >
                                   <input
+                                    id="register-avatar"
                                     type="url"
                                     class="focus:outline-none w-full"
                                     placeholder="Profile picture"
@@ -322,6 +329,7 @@
                                     >Register a password:</label
                                   >
                                   <input
+                                    id="register-pwd"
                                     type="password"
                                     class="focus:outline-none w-full"
                                     placeholder="Password"
@@ -461,8 +469,8 @@
     </main>
     <!-- End of Main body-->
     <!-- Footer in the bottom-->
-    <footer class="bg-slate-700/90 h-16 items-center text-center">
-      <div>My footer</div>
+    <footer class="bg-slate-700/90 h-16 text-center content-center">
+      <div class="m-auto items-center content-center">My footers</div>
     </footer>
   </body>
 </html>
