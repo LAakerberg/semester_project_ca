@@ -1,0 +1,21 @@
+/* components/fonts/icons.css */
+
+/* Google icons */
+
+@layer base {
+  .material-symbols-outlined {
+    font-size: 32px;
+    color: #b8b8b8;
+    transition: 0.4s;
+    padding: 0px 5px;
+  }
+}
+
+@layer base {
+  .material-symbols-outlined:hover {
+    text-decoration: underline;
+    color: #e6e6e6;
+    transition: 0.4s;
+    text-shadow: 0 0 20px #de600b;
+  }
+}
