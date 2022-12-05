@@ -52,8 +52,21 @@ export function loginUser() {
         };
         const response = await fetch(API_HOST_LOGIN, loginTheUser);
         const json = await response.json();
+        const accessToken = json.accessToken;
 
-        console.log(json);
+        //console.log(response);
+        //console.log(json);
+
+        if (response.ok === true) {
+          localStorage.setItem('myToken', accessToken);
+          localStorage.setItem('myName', json.name);
+          localStorage.setItem('myEmail', json.email);
+          localStorage.setItem('myAvatar', json.avatar);
+          localStorage.setItem('myCredit', json.credits);
+          return json;
+        } else {
+          console.log('Not able to log in');
+        }
       } catch (error) {
         console.log('Error to login');
       }
