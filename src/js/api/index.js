@@ -7,3 +7,11 @@ loginUser();
 import { openLoginForm } from './login/login.js';
 
 openLoginForm();
+
+import { openRegisterForm } from './login/register.js';
+
+openRegisterForm();
+
+import { registerUser } from './login/register.js';
+
+registerUser();
