@@ -3,78 +3,484 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/src/css/style.css" rel="stylesheet" />
-    <!--<script src="/main.js" type="module" defer></script>-->
+    <script src="/src/js/index.js" type="module" defer></script>
+    <script src="/src/js/api/index.js" type="module" defer></script>
+    <meta
+      name="description"
+      content="Zero Bud - Your auction house for all games"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <link href="../src/css/style.css" rel="stylesheet" />
+    <title>Zero Bud | Find your games</title>
   </head>
-  <body class="bg-slate-500 grid">
-    <header class="grid-rows-1"></header>
 
-    <main class="grid-rows-2">
-      <div>
-        <nav class="bg-pink-300">
-          <ul class="block">
-            <li>
-              <a
-                href="../index.html"
-                class="text-base text-cyan-900 hover:text-blue-600 px-1"
-                >About</a
-              >
-            </li>
-            <li>
-              <a
-                href="index.html"
-                class="text-base text-cyan-900 hover:text-blue-600 px-1"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="text-base text-cyan-900 hover:text-blue-600 px-1"
-                >Contact</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="text-base text-cyan-900 hover:text-blue-600 px-1"
-                >FAQ</a
-              >
-            </li>
-          </ul>
-        </nav>
+  <body class="zero-text-color">
+    <!-- Header -->
+    <header class="h-96 max-h-96 zero-font-niramit">
+      <div class="header-img static h-96 max-h-96">
+        <div
+          class="flex flex-row bg-color-nav h-16 max-h-16 w-full place-content-center fixed top-0 z-10"
+        >
+          <!-- <div class="flex-shrink w-36 m-auto text-center hidden">
+            <p class="zero-font-style-1">ZERO BUD</p>
+          </div>
+          <div class="flex-shrink m-auto inline-flex hidden">
+            <ul class="zero-font-style-1 inline-flex">
+              <li class="px-1">Home</li>
+              <li class="px-1">Products</li>
+              <li class="px-1">About</li>
+              <li class="px-1">Contact</li>
+            </ul>
+            <div class="flex-shrink w-64 m-auto hidden">
+              <input
+                type="search"
+                class="focus:outline-none"
+                placeholder="Search for you next game..."
+              />
+            </div>
+          </div>
+          <div class="flex-shrink w-52 m-auto zero-font-style-1 hidden">
+            <button class="btn-secondary mr-1" id="loginBtn">Log in</button>
+            <button class="btn-primary ml-1" id="registerBtn">Sign UP</button>
+          </div> -->
+          <!-- Navigation section-->
+          <nav
+            class="h-16 zero-text-color w-4/5 m-auto p-0 text-center flex place-content-center static"
+          >
+            <div class="flex-shrink w-40 m-auto zero-font-style-1">
+              <span>ZERO BUD</span>
+              <span class="material-symbols-outlined"> home </span>
+            </div>
+            <div class="flex-shrink w-64 m-auto">
+              <input
+                type="search"
+                class="focus:outline-none"
+                placeholder="Search for you next game..."
+              />
+            </div>
+            <div
+              class="bg-slate-800 flex-shrink m-auto absolute top-16 p-2 rounded-b-lg"
+            >
+              <ul class="zero-font-style-1">
+                <li class="px-2"><a href="" class="">Home</a></li>
+                <li class="px-2"><a href="" class="">Products</a></li>
+                <li class="px-2"><a href="" class="">About</a></li>
+                <li class="px-2"><a href="" class="">Contact</a></li>
+              </ul>
+            </div>
+            <div class="flex-shrink w-52 m-auto zero-font-style-1">
+              <span class="material-symbols-outlined"> account_circle </span>
+              <span class="material-symbols-outlined"> favorite </span>
+              <span class="material-symbols-outlined"> shopping_cart </span>
+              <!--               <button class="btn-secondary mr-1" id="loginBtn">Log in</button>
+              <button class="btn-primary ml-1" id="registerBtn">Sign UP</button> -->
+            </div>
+          </nav>
+        </div>
+        <!-- Header with information text -->
+        <div class="absolute top-20 left-10">
+          <h1 class="zero-font-ubuntu text-4xl uppercase">
+            Welcome to ZERO-BUD
+          </h1>
+          <span class="zero-font-ubunt text-lg pl-8 uppercase"
+            >For gamers By gamers...</span
+          >
+        </div>
+        <div
+          class="bg-slate-700/90 border border-sky-600 sm:w-fit top-52 m-1 md:w-96 rounded-lg absolute md:top-44 md:right-2 lg:right-16 p-4"
+        >
+          <h1 class="zero-font-ubuntu text-3xl">Find your next game</h1>
+          <span class="zero-font-ubunt text-sm"
+            >Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s.</span
+          >
+        </div>
       </div>
-      <h1 class="text-3xl text-green-600 font-bold underline">
-        Hello world!!!
-      </h1>
-      <h2 class="text-orange-900 font-bold underline">Hello something!</h2>
-      <h3 class="text-orange-400 font-bold">No no no no</h3>
-      <h4 class="text-green-400 font-bold">Yes yes ye</h4>
-      <h4 class="text-green-400 font-bold">Yes yes ye</h4>
-      <h4 class="text-green-400 font-bold">Yes yes ye</h4>
+    </header>
+    <!-- End of header -->
+    <!-- Main body-->
 
-      <h4 class="text-green-400 font-bold">Yes yes ye</h4>
-      <h4 class="text-green-400 font-bold">Yes yes ye</h4>
-      <h4 class="text-green-400 font-bold">Yes yes ye</h4>
-      <h4 class="text-green-400 font-bold">Yes yes ye</h4>
-      <h4 class="text-green-400 font-bold">Yes yes ye</h4>
-      <h4 class="text-green-400 font-bold">Yes yes ye</h4>
-      <div class="bg-orange-200">
-        <div><h2>Hello???? Background???</h2></div>
-        <div><p class="text-rose-800">No Background???</p></div>
+    <main class="flex flex-col p-3 items-center zero-font-niramit">
+      <!-- Login modal -->
+      <div class="relative z-10 hidden transition-all" id="loginModal">
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity">
+          <div class="fixed inset-0 overflow-hidden">
+            <div class="absolute inset-0 overflow-hidden">
+              <div
+                class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10"
+              >
+                <!--
+                  Slide-over panel, show/hide based on slide-over state.
+        
+                  Entering: "transform transition ease-in-out duration-500 sm:duration-700"
+                    From: "translate-x-full"
+                    To: "translate-x-0"
+                  Leaving: "transform transition ease-in-out duration-500 sm:duration-700"
+                    From: "translate-x-0"
+                    To: "translate-x-full"
+                -->
+                <div class="pointer-events-auto relative w-screen max-w-md">
+                  <!--
+                    Close button, show/hide based on slide-over state.
+        
+                    Entering: "ease-in-out duration-500"
+                      From: "opacity-0"
+                      To: "opacity-100"
+                    Leaving: "ease-in-out duration-500"
+                      From: "opacity-100"
+                      To: "opacity-0"
+                  -->
+                  <div
+                    class="absolute top-0 left-0 -ml-8 flex pt-4 pr-2 sm:-ml-10 sm:pr-4"
+                  >
+                    <button
+                      id="close"
+                      type="button"
+                      class="bg-slate-500 hover:bg-slate-800 rounded-md border border-orange-400 text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
+                    >
+                      <span class="sr-only">Close panel</span>
+                      <!-- Heroicon name: outline/x-mark -->
+                      <svg
+                        class="h-6 w-6"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M6 18L18 6M6 6l12 12"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+
+                  <div
+                    class="flex h-full flex-col overflow-y-scroll bg-color-nav py-6 shadow-xl"
+                  >
+                    <div class="px-4 sm:px-6">
+                      <h2
+                        class="text-lg font-medium text-gray-300"
+                        id="slide-over-title"
+                      >
+                        Login
+                      </h2>
+                    </div>
+                    <div class="relative mt-6 flex-1 px-4 sm:px-6">
+                      <div class="flex-shrink w-64 m-auto">
+                        <div
+                          class="absolute inset-0 px-4 sm:px-6 text-gray-300"
+                        >
+                          <div
+                            class="h-auto border-2 border-dashed border-gray-200 p-2"
+                            aria-hidden="true"
+                          >
+                            <!-- Form -->
+                            <form class="" id="login-form" action="">
+                              <div class="flex flex-col gap-2 items-center">
+                                <div class="flex-1 w-5/6 items-center">
+                                  <input
+                                    id="login-name"
+                                    type="name"
+                                    class="focus:outline-none w-full"
+                                    placeholder="Username"
+                                  />
+                                </div>
+                                <div class="flex-1 w-5/6">
+                                  <input
+                                    id="login-pwd"
+                                    type="password"
+                                    class="focus:outline-none w-full"
+                                    placeholder="Password"
+                                  />
+                                </div>
+                                <button
+                                  type="submit"
+                                  class="btn-secondary mr-1 zero-font-style-1 items-start"
+                                  id="login-btn"
+                                >
+                                  Log in
+                                </button>
+                              </div>
+                            </form>
+                            <!-- Form END-->
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /End replace -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      <!-- End of login in modal -->
+
+      <!-- Sign up modal -->
+      <div class="relative z-10 hidden transition-all" id="signupModal">
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity">
+          <div class="fixed inset-0 overflow-hidden">
+            <div class="absolute inset-0 overflow-hidden">
+              <div
+                class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10"
+              >
+                <!--
+                  Slide-over panel, show/hide based on slide-over state.
+        
+                  Entering: "transform transition ease-in-out duration-500 sm:duration-700"
+                    From: "translate-x-full"
+                    To: "translate-x-0"
+                  Leaving: "transform transition ease-in-out duration-500 sm:duration-700"
+                    From: "translate-x-0"
+                    To: "translate-x-full"
+                -->
+                <div class="pointer-events-auto relative w-screen max-w-md">
+                  <!--
+                    Close button, show/hide based on slide-over state.
+        
+                    Entering: "ease-in-out duration-500"
+                      From: "opacity-0"
+                      To: "opacity-100"
+                    Leaving: "ease-in-out duration-500"
+                      From: "opacity-100"
+                      To: "opacity-0"
+                  -->
+                  <div
+                    class="absolute top-0 left-0 -ml-8 flex pt-4 pr-2 sm:-ml-10 sm:pr-4"
+                  >
+                    <button
+                      id="signup-close"
+                      type="button"
+                      class="bg-slate-500 hover:bg-slate-800 rounded-md border border-orange-400 text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
+                    >
+                      <span class="sr-only">Close panel</span>
+                      <!-- Heroicon name: outline/x-mark -->
+                      <svg
+                        class="h-6 w-6"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M6 18L18 6M6 6l12 12"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+
+                  <div
+                    class="flex h-full flex-col overflow-y-scroll bg-color-nav py-6 shadow-xl"
+                  >
+                    <div class="px-4 sm:px-6">
+                      <h2
+                        class="text-lg font-medium text-gray-300"
+                        id="slide-over-title"
+                      >
+                        Sign up
+                      </h2>
+                    </div>
+                    <div class="relative mt-6 flex-1 px-4 sm:px-6">
+                      <div class="flex-shrink w-64 m-auto">
+                        <div
+                          class="absolute inset-0 px-4 sm:px-6 text-gray-300"
+                        >
+                          <div
+                            class="h-auto border-2 border-dashed border-gray-200 p-2"
+                            aria-hidden="true"
+                          >
+                            <!-- Form -->
+                            <form id="register-form" action="">
+                              <div class="flex flex-col gap-2 items-center">
+                                <div class="flex-1 w-5/6 items-center">
+                                  <label for="name">Enter your name:</label>
+                                  <input
+                                    id="register-name"
+                                    type="name"
+                                    class="focus:outline-none w-full"
+                                    placeholder="Your name"
+                                  />
+                                </div>
+                                <div class="flex-1 w-5/6">
+                                  <label for="email">Enter your email:</label>
+                                  <input
+                                    id="register-email"
+                                    type="email"
+                                    class="focus:outline-none w-full"
+                                    placeholder="Your email"
+                                  />
+                                </div>
+                                <div class="flex-1 w-5/6">
+                                  <label for="url"
+                                    >Enter your profile image URL:</label
+                                  >
+                                  <input
+                                    id="register-avatar"
+                                    type="url"
+                                    class="focus:outline-none w-full"
+                                    placeholder="Profile picture"
+                                  />
+                                </div>
+                                <div class="flex-1 w-5/6">
+                                  <label for="password"
+                                    >Register a password:</label
+                                  >
+                                  <input
+                                    id="register-pwd"
+                                    type="password"
+                                    class="focus:outline-none w-full"
+                                    placeholder="Password"
+                                  />
+                                </div>
+                                <button
+                                  class="btn-secondary mr-1 zero-font-style-1 items-start"
+                                  id="register"
+                                >
+                                  Register
+                                </button>
+                              </div>
+                            </form>
+                            <!-- Form END-->
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /End replace -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of login & sign in modal -->
+      <!-- Section with the latest news -->
+      <section class="md:w-5/6 lg:w-4/6 m-0 p-0">
+        <div class="py-4"><h2 class="text-2xl">Latest news</h2></div>
+        <div class="flex flex-col gap-2">
+          <div
+            class="bg-slate-700/90 border border-sky-600 w-full rounded-t-lg p-2"
+          >
+            <h3 class="text-xl">Find your next game</h3>
+          </div>
+          <div
+            class="bg-slate-700/90 border border-sky-600 w-full rounded-b-lg p-2"
+          >
+            <div>
+              <p>
+                Main Content. Lorem Ipsum is simply dummy text of the printing
+                and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type
+                specimen book. It has survived not only five centuries, but also
+                the leap into electronic typesetting
+              </p>
+
+              <p>
+                Main Content. Lorem Ipsum is simply dummy text of the printing
+                and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type
+                specimen book. It has survived not only five centuries, but also
+                the leap into electronic typesetting
+              </p>
+            </div>
+            <div class="p-1">Tags</div>
+          </div>
+        </div>
+      </section>
+      <!-- Section with information about the site -->
+      <!-- Section with the latest news -->
+      <section class="md:w-5/6 lg:w-4/6 m-0 p-0">
+        <div class="py-4"></div>
+        <div class="flex flex-col gap-2">
+          <div
+            class="bg-slate-700/90 border border-sky-600 w-full rounded-t-lg p-2"
+          >
+            <h3 class="text-xl">Find your next game</h3>
+          </div>
+          <div
+            class="bg-slate-700/90 border border-sky-600 w-full rounded-b-lg p-2"
+          >
+            <div>
+              <p>
+                Main Content. Lorem Ipsum is simply dummy text of the printing
+                and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type
+                specimen book. It has survived not only five centuries, but also
+                the leap into electronic typesetting
+              </p>
+
+              <p>
+                Main Content. Lorem Ipsum is simply dummy text of the printing
+                and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type
+                specimen book. It has survived not only five centuries, but also
+                the leap into electronic typesetting
+              </p>
+            </div>
+            <div class="p-1">Tags</div>
+          </div>
+        </div>
+      </section>
+      <!-- Section with information about the site -->
+      <!-- Section with the latest news -->
+      <section class="md:w-5/6 lg:w-4/6 m-0 p-0">
+        <div class="py-4"></div>
+        <div class="flex flex-col gap-2">
+          <div
+            class="bg-slate-700/90 border border-sky-600 w-full rounded-t-lg p-2"
+          >
+            <h3 class="text-xl">Find your next game</h3>
+          </div>
+          <div
+            class="bg-slate-700/90 border border-sky-600 w-full rounded-b-lg p-2"
+          >
+            <div>
+              <p>
+                Main Content. Lorem Ipsum is simply dummy text of the printing
+                and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type
+                specimen book. It has survived not only five centuries, but also
+                the leap into electronic typesetting
+              </p>
+
+              <p>
+                Main Content. Lorem Ipsum is simply dummy text of the printing
+                and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type
+                specimen book. It has survived not only five centuries, but also
+                the leap into electronic typesetting
+              </p>
+            </div>
+            <div class="p-1">Tags</div>
+          </div>
+        </div>
+      </section>
+      <!-- Section with information about the site -->
+      <section class="md:w-5/6 lg:w-4/6">s</section>
     </main>
-
-    <footer class="grid-rows-1">
-      <div>
-        <p class="text-blue-400">Testing</p>
-        <p class="text-pink-400">Testing</p>
-        <p class="text-orange-400">Testing</p>
-      </div>
-      <div class="bg-pink-600 border-solid border-2 border-blue-500">
-        <h2>My footer</h2>
-        <p class="text-orange-400 bg-pink-600">This is my footer</p>
-      </div>
+    <!-- End of Main body-->
+    <!-- Footer in the bottom-->
+    <footer class="bg-slate-700/90 h-16 text-center content-center">
+      <div class="m-auto items-center content-center">My footers</div>
     </footer>
   </body>
 </html>
