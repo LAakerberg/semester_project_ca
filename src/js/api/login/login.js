@@ -14,8 +14,7 @@ const btnClose = document.querySelector('#close');
 // Import API for login the user
 import { API_HOST_LOGIN } from '../auth/apiBase.js';
 import { redirect } from '../../components/function.js';
-import { errorMessage } from '../../components/message.js';
-import { successMessage } from '../../components/message.js';
+import { errorMessage, successMessage } from '../../components/message.js';
 
 /* const method = 'POST';
 const body = 'JSON.stringify(data)'; */
@@ -75,7 +74,7 @@ export function loginUser() {
           redirect(response);
           return json;
         } else {
-          loginMessage.innerHTML = errorMessage();
+          loginMessage.innerHTML = errorMessage('Wrong password or username!');
           console.log('Not able to log in');
         }
       } catch (error) {

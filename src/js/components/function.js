@@ -13,3 +13,15 @@ export function redirect(response) {
     //return errorMessage('');
   }
 }
+
+export function logOutUser() {
+  const logOut = document.querySelector('#logout');
+
+  logOut.onclick = function () {
+    localStorage.clear();
+    alert('You will now be logged out, welcome back!');
+    setTimeout(() => {
+      window.location.replace('/index.html');
+    }, 2000);
+  };
+}
