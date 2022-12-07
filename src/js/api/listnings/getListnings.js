@@ -25,8 +25,13 @@ export async function getListings(url) {
     const listingsTitle = listingsResults[0].title;
     const listingsCreated = listingsResults[0].created;
 
+    console.log(response);
     console.log(listingsResults);
     console.log('Hello?');
+
+    if (response.ok === true) {
+      console.log('True');
+    }
 
     auctionListings.innerHTML = `
     <!-- Product card -->
