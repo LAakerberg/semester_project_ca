@@ -1,5 +1,6 @@
 /* components.css */
 @import '/src/css/buttons/buttons.css';
+@import '/src/css/components/components.css';
 
 body::-webkit-scrollbar {
   width: 0.9em;

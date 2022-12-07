@@ -1,0 +1,21 @@
+/* components/components.css */
+
+@layer components {
+  .border-success {
+    border-color: darkolivegreen;
+  }
+}
+
+@layer components {
+  .border-error {
+    border-color: darkred;
+  }
+}
+
+@layer components {
+  .border-warning {
+    font-family: Acme;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+  }
+}
