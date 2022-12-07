@@ -1,3 +1,6 @@
+// Message if login is successful or disbanded
+const loginMessage = document.querySelector('#login-message');
+
 // Login form selectors
 const loginForm = document.querySelector('#login-form');
 const loginName = document.querySelector('#login-name');
@@ -10,6 +13,9 @@ const btnClose = document.querySelector('#close');
 
 // Import API for login the user
 import { API_HOST_LOGIN } from '../auth/apiBase.js';
+import { redirect } from '../../components/function.js';
+import { errorMessage } from '../../components/message.js';
+import { successMessage } from '../../components/message.js';
 
 /* const method = 'POST';
 const body = 'JSON.stringify(data)'; */
@@ -63,12 +69,19 @@ export function loginUser() {
           localStorage.setItem('myEmail', json.email);
           localStorage.setItem('myAvatar', json.avatar);
           localStorage.setItem('myCredit', json.credits);
+          loginMessage.innerHTML = successMessage(
+            'Log in was successful, you will be redirected'
+          );
+          redirect(response);
           return json;
         } else {
+          loginMessage.innerHTML = errorMessage();
           console.log('Not able to log in');
         }
       } catch (error) {
-        console.log('Error to login');
+        loginMessage.innerHTML = errorMessage(
+          'Not able to contact server! Try again later!'
+        );
       }
     }
 
