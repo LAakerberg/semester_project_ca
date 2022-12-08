@@ -7,33 +7,6 @@
 @import 'tailwindcss/utilities';
 
 @layer components {
-  body {
-    min-height: 100vh;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    margin: 0px auto;
-    background-color: #1f2d3b;
-  }
-}
-
-@layer components {
-  header,
-  main,
-  footer {
-    width: 100%;
-    margin: 0px auto;
-  }
-}
-
-@layer components {
-  .bg-color-nav {
-    background-color: rgba(32, 46, 60, 0.85);
-    backdrop-filter: blur(2px);
-    /* filter: brightness(100%); */
-  }
-}
-
-@layer components {
   .zero-text-color {
     color: #e6e6e6;
   }
