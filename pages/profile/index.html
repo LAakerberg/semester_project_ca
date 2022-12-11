@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/src/js/index.js" type="module" defer></script>
+    <script
+      src="/src/js/api/listnings/getListnings.js"
+      type="module"
+      defer
+    ></script>
+    <meta
+      name="description"
+      content="Zero Bud - Your auction house for all games"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <link href="/src/css/style.css" rel="stylesheet" />
+    <title>Zero Bud | Find your games</title>
+  </head>
+
+  <body class="zero-text-color">
+    <!-- Header -->
+    <header class="h-64 max-h-96 zero-font-niramit">
+      <div class="header-img static h-64 max-h-96">
+        <div
+          class="flex flex-row bg-color-nav h-16 max-h-16 w-full place-content-center fixed top-0 z-10"
+        >
+          <!-- <div class="flex-shrink w-36 m-auto text-center hidden">
+            <p class="zero-font-style-1">ZERO BUD</p>
+          </div>
+          <div class="flex-shrink m-auto inline-flex hidden">
+            <ul class="zero-font-style-1 inline-flex">
+              <li class="px-1">Home</li>
+              <li class="px-1">Products</li>
+              <li class="px-1">About</li>
+              <li class="px-1">Contact</li>
+            </ul>
+            <div class="flex-shrink w-64 m-auto hidden">
+              <input
+                type="search"
+                class="focus:outline-none"
+                placeholder="Search for you next game..."
+              />
+            </div>
+          </div>
+          <div class="flex-shrink w-52 m-auto zero-font-style-1 hidden">
+            <button class="btn-secondary mr-1" id="loginBtn">Log in</button>
+            <button class="btn-primary ml-1" id="registerBtn">Sign UP</button>
+          </div> -->
+          <!-- Navigation section-->
+          <nav
+            class="h-16 zero-text-color w-4/5 m-auto p-0 text-center flex place-content-center static"
+          >
+            <div class="flex-shrink w-40 m-auto zero-font-style-1">
+              <span>ZERO BUD</span>
+              <span class="material-symbols-outlined"> home </span>
+            </div>
+            <div class="flex-shrink w-64 m-auto">
+              <input
+                type="search"
+                class="focus:outline-none"
+                placeholder="Search for you next game..."
+              />
+            </div>
+            <div
+              class="bg-slate-600 flex-shrink m-auto absolute top-20 p-2 rounded-lg"
+            >
+              <ul class="zero-font-style-1">
+                <li class="px-2">
+                  <a href="/pages/index.html" class="">Home</a>
+                </li>
+                <li class="px-2"><a href="" class="">Products</a></li>
+                <li class="px-2"><a href="" class="">About</a></li>
+                <li class="px-2"><a href="" class="">Contact</a></li>
+              </ul>
+            </div>
+            <div class="flex-shrink w-52 m-auto zero-font-style-1">
+              <span class="material-symbols-outlined"> account_circle </span>
+              <span class="material-symbols-outlined"> favorite </span>
+              <span class="material-symbols-outlined"> shopping_cart </span>
+              <a href="/index.html" id="logout">
+                <span class="material-symbols-outlined"> logout </span>
+              </a>
+              <!--               <button class="btn-secondary mr-1" id="loginBtn">Log in</button>
+              <button class="btn-primary ml-1" id="registerBtn">Sign UP</button> -->
+            </div>
+          </nav>
+        </div>
+        <!-- Header with information text -->
+        <div class="absolute top-40 xl:top-20 left-10">
+          <h1 class="zero-font-ubuntu text-4xl uppercase">
+            Welcome to ZERO-BUD
+          </h1>
+          <span class="zero-font-ubunt text-lg pl-8 uppercase"
+            >For gamers By gamers...</span
+          >
+        </div>
+        <div
+          class="bg-slate-700/90 border border-sky-600 sm:w-fit top-52 m-1 md:w-96 rounded-lg absolute md:top-44 md:right-2 lg:right-16 p-4 hidden"
+        >
+          <h1 class="zero-font-ubuntu text-3xl">Find your next game</h1>
+          <span class="zero-font-ubunt text-sm"
+            >Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s.</span
+          >
+        </div>
+      </div>
+    </header>
+    <!-- End of header -->
+    <!-- Main body-->
+
+    <main class="flex flex-col p-3 items-center zero-font-niramit">
+      <!-- Section with the profile information -->
+      <section class="md:w-5/6 lg:w-4/6 m-0 p-0">
+        <div class="flex flex-row py-4">
+          <div class="flex-shrink w-36">
+            <h2 class="text-2xl">Profile</h2>
+          </div>
+        </div>
+        <div
+          class="bg-slate-600 outline outline-1 outline-slate-500 rounded-sm shadow-lg shadow-slate-400/30 p-1 h-52 flex flex-row gap-2"
+        >
+          <div class="flex-shrink w-64">
+            <div
+              class="bg-slate-700 outline outline-1 outline-slate-500 rounded-md h-48"
+            >
+              Image
+            </div>
+          </div>
+          <div class="flex-1">
+            Username
+            <div>
+              <ul>
+                <li>Nattlegend</li>
+                <li>Credit</li>
+                <li>Nattlegend</li>
+                <li>Credit</li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex-grow-0">Edit profile</div>
+        </div>
+      </section>
+      <!-- Section with information about the site -->
+      <!-- Section with the active listings -->
+      <section class="md:w-5/6 lg:w-4/6 m-0 p-0">
+        <div class="flex flex-row py-4">
+          <div class="flex-shrink w-36">
+            <h2 class="text-xl">Active listings</h2>
+          </div>
+        </div>
+        <div
+          class="bg-slate-600 outline outline-1 outline-slate-500 rounded-sm shadow-lg shadow-slate-400/30 p-1 h-52 flex flex-row gap-2"
+        >
+          <div class="flex-shrink w-64">
+            <div
+              class="bg-slate-700 outline outline-1 outline-slate-500 rounded-md h-48"
+            >
+              Image
+            </div>
+          </div>
+          <div class="flex-1">
+            Username
+            <div>
+              <ul>
+                <li>Nattlegend</li>
+                <li>Credit</li>
+                <li>Nattlegend</li>
+                <li>Credit</li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex-grow-0">Edit profile</div>
+        </div>
+      </section>
+      <!-- Section with information about the site -->
+      <!-- Section with the active listings -->
+      <section class="md:w-5/6 lg:w-4/6 m-0 p-0">
+        <div class="flex flex-row py-4">
+          <div class="flex-shrink w-36">
+            <h2 class="text-xl">Active listings</h2>
+          </div>
+        </div>
+        <div
+          class="bg-slate-600 outline outline-1 outline-slate-500 rounded-sm shadow-lg shadow-slate-400/30 p-1 h-52 flex flex-row gap-2"
+        >
+          <div class="flex-shrink w-64">
+            <div
+              class="bg-slate-700 outline outline-1 outline-slate-500 rounded-md h-48"
+            >
+              Image
+            </div>
+          </div>
+          <div class="flex-1">
+            Username
+            <div>
+              <ul>
+                <li>Nattlegend</li>
+                <li>Credit</li>
+                <li>Nattlegend</li>
+                <li>Credit</li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex-grow-0">Edit profile</div>
+        </div>
+      </section>
+      <!-- Section with information about the site -->
+    </main>
+    <!-- End of Main body-->
+    <!-- Footer in the bottom-->
+    <footer class="bg-slate-700/90 h-16 text-center content-center">
+      <div class="m-auto items-center content-center">My footers</div>
+    </footer>
+  </body>
+</html>
