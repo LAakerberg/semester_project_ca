@@ -42,6 +42,7 @@ export async function getListings(url) {
       if (response.ok === true) {
         const listingsID = listingsResults[i].id;
         const listingsTitle = listingsResults[i].title.slice(0, 20);
+        const listingsMedia = listingsResults[i].media[0];
         const listingsCreated = listingsResults[i].created;
 
         auctionListings.innerHTML += `
@@ -51,8 +52,8 @@ export async function getListings(url) {
         >
           <div class="h-4/6 border-b-2 border-slate-500">
             <img
-              src="/assets/img/head-img.jpg"
-              class="img-style rounded-t-lg p-1"
+              src="${listingsMedia}"
+              class="img-style rounded-t-lg w-44 h-32"
             />
           </div>
           <div class="p-1">${listingsTitle}</div>
