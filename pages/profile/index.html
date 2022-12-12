@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="/src/js/index.js" type="module" defer></script>
+    <!-- <script src="/src/js/index.js" type="module" defer></script> -->
     <script
-      src="/src/js/api/listnings/getListnings.js"
+      src="/src/js/api/profile/getProfile.js"
       type="module"
       defer
     ></script>
@@ -122,28 +122,9 @@
           </div>
         </div>
         <div
+          id="profile"
           class="bg-slate-600 outline outline-1 outline-slate-500 rounded-sm shadow-lg shadow-slate-400/30 p-1 h-52 flex flex-row gap-2"
-        >
-          <div class="flex-shrink w-64">
-            <div
-              class="bg-slate-700 outline outline-1 outline-slate-500 rounded-md h-48"
-            >
-              Image
-            </div>
-          </div>
-          <div class="flex-1">
-            Username
-            <div>
-              <ul>
-                <li>Nattlegend</li>
-                <li>Credit</li>
-                <li>Nattlegend</li>
-                <li>Credit</li>
-              </ul>
-            </div>
-          </div>
-          <div class="flex-grow-0">Edit profile</div>
-        </div>
+        ></div>
       </section>
       <!-- Section with information about the site -->
       <!-- Section with the active listings -->
@@ -154,59 +135,10 @@
           </div>
         </div>
         <div
-          class="bg-slate-600 outline outline-1 outline-slate-500 rounded-sm shadow-lg shadow-slate-400/30 p-1 h-52 flex flex-row gap-2"
+          id="active-list"
+          class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 justify-items-center m-1 p-1"
         >
-          <div class="flex-shrink w-64">
-            <div
-              class="bg-slate-700 outline outline-1 outline-slate-500 rounded-md h-48"
-            >
-              Image
-            </div>
-          </div>
-          <div class="flex-1">
-            Username
-            <div>
-              <ul>
-                <li>Nattlegend</li>
-                <li>Credit</li>
-                <li>Nattlegend</li>
-                <li>Credit</li>
-              </ul>
-            </div>
-          </div>
-          <div class="flex-grow-0">Edit profile</div>
-        </div>
-      </section>
-      <!-- Section with information about the site -->
-      <!-- Section with the active listings -->
-      <section class="md:w-5/6 lg:w-4/6 m-0 p-0">
-        <div class="flex flex-row py-4">
-          <div class="flex-shrink w-36">
-            <h2 class="text-xl">Active listings</h2>
-          </div>
-        </div>
-        <div
-          class="bg-slate-600 outline outline-1 outline-slate-500 rounded-sm shadow-lg shadow-slate-400/30 p-1 h-52 flex flex-row gap-2"
-        >
-          <div class="flex-shrink w-64">
-            <div
-              class="bg-slate-700 outline outline-1 outline-slate-500 rounded-md h-48"
-            >
-              Image
-            </div>
-          </div>
-          <div class="flex-1">
-            Username
-            <div>
-              <ul>
-                <li>Nattlegend</li>
-                <li>Credit</li>
-                <li>Nattlegend</li>
-                <li>Credit</li>
-              </ul>
-            </div>
-          </div>
-          <div class="flex-grow-0">Edit profile</div>
+          <!-- Product cards inserted -->
         </div>
       </section>
       <!-- Section with information about the site -->
