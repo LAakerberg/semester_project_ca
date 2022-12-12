@@ -25,7 +25,7 @@ export async function getListings(url) {
     console.log(response);
     console.log(listingsResults);
 
-    const dateRequested = new Date(`${listingsResults[0].created}`);
+    const dateRequested = new Date(`${listingsResults[0].endsAt}`);
     // Formats the date from the request to be more user friendly and readable
     const dateFormatted = {
       year: 'numeric',
@@ -44,6 +44,7 @@ export async function getListings(url) {
         const listingsTitle = listingsResults[i].title.slice(0, 20);
         const listingsMedia = listingsResults[i].media[0];
         const listingsCreated = listingsResults[i].created;
+        const listingsEnd = listingsResults[i].endsAt;
 
         auctionListings.innerHTML += `
         <!-- Product card -->
@@ -57,7 +58,7 @@ export async function getListings(url) {
             />
           </div>
           <div class="p-1">${listingsTitle}</div>
-          <div class="p-1">${newFormat}</div>
+          <div class="p-1">Ends: ${newFormat}</div>
         </div>
         <!-- Product card END -->
         `;
@@ -69,4 +70,4 @@ export async function getListings(url) {
   }
 }
 
-getListings(API_HOST_LISTINGS);
+getListings(`${API_HOST_LISTINGS}?_active=true`);
