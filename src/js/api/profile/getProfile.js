@@ -14,30 +14,31 @@ activeListings.innerHTML = ``;
 const profileIdentify = localStorage.getItem('myName');
 const profileEmail = localStorage.getItem('myEmail');
 
-export async function getProfile(url) {
-  try {
-    const response = await authFetch(
-      url,
-      {
-        method,
-      },
-      headers()
-    );
+export function requestProfile() {
+  async function getProfile(url) {
+    try {
+      const response = await authFetch(
+        url,
+        {
+          method,
+        },
+        headers()
+      );
 
-    const json = await response.json(API_HOST_PROFILES);
-    const profileInfo = json;
+      const json = await response.json(API_HOST_PROFILES);
+      const profileInfo = json;
 
-    console.log(profileInfo);
+      console.log(profileInfo);
 
-    if (response.ok === true && profileEmail === profileInfo.email) {
-      const profileName = profileInfo.name;
-      const profileEmail = profileInfo.email;
-      const profileCredit = profileInfo.credits;
-      const profileAvatar = profileInfo.avatar;
-      const profileWins = profileInfo.wins.length;
-      const profileCount = profileInfo._count.listings;
+      if (response.ok === true && profileEmail === profileInfo.email) {
+        const profileName = profileInfo.name;
+        const profileEmail = profileInfo.email;
+        const profileCredit = profileInfo.credits;
+        const profileAvatar = profileInfo.avatar;
+        const profileWins = profileInfo.wins.length;
+        const profileCount = profileInfo._count.listings;
 
-      profileInsert.innerHTML += `
+        profileInsert.innerHTML += `
         <!-- Product card -->
         <div class="flex-shrink w-64">
         <div
@@ -66,20 +67,20 @@ export async function getProfile(url) {
         <!-- Product card END -->
         `;
 
-      for (let i = 0; i < profileInfo.listings.length; i++) {
-        const dateRequested = new Date(`${profileInfo.listings[0].created}`);
-        // Formats the date from the request to be more user friendly and readable
-        const dateFormatted = {
-          year: 'numeric',
-          month: 'numeric',
-          day: 'numeric',
-        };
-        const newFormat = dateRequested.toLocaleDateString(
-          'en-GB',
-          dateFormatted
-        );
+        for (let i = 0; i < profileInfo.listings.length; i++) {
+          const dateRequested = new Date(`${profileInfo.listings[0].endsAt}`);
+          // Formats the date from the request to be more user friendly and readable
+          const dateFormatted = {
+            year: 'numeric',
+            month: 'numeric',
+            day: 'numeric',
+          };
+          const newFormat = dateRequested.toLocaleDateString(
+            'en-GB',
+            dateFormatted
+          );
 
-        activeListings.innerHTML += `
+          activeListings.innerHTML += `
         <!-- Product card -->
         <div
           class="bg-slate-600 outline outline-1 hover:outline-2 outline-slate-500 rounded-lg w-44 h-48 shadow-lg hover:shadow-slate-400/50"
@@ -87,22 +88,23 @@ export async function getProfile(url) {
           <div class="h-4/6 border-b-2 border-slate-500">
             <img
               src="${profileInfo.listings[i].media[0]}"
-              class="img-style rounded-t-lg p-1 w-44 h-32"
+              class="img-style rounded-t-lg p-1"
             />
           </div>
-          <div class="p-1">${profileInfo.listings[i].title}</div>
-          <div class="p-1">${newFormat}</div>
+          <div class="p-1">${profileInfo.listings[i].title.slice(0, 27)}</div>
+          <div class="p-1">Ends: ${newFormat}</div>
         </div>
         <!-- Product card END -->
         `;
+        }
+      } else {
+        console.log('No match');
       }
-    } else {
-      console.log('No match');
+    } catch (error) {
+      console.log('Error loading the auction house listings');
+      console.log('Hello?');
     }
-  } catch (error) {
-    console.log('Error loading the auction house listings');
-    console.log('Hello?');
   }
-}
 
-getProfile(`${API_HOST_PROFILES}${profileIdentify}?_listings=true`);
+  getProfile(`${API_HOST_PROFILES}${profileIdentify}?_listings=true`);
+}
