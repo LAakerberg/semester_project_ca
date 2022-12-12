@@ -39,7 +39,7 @@ export function requestProfile() {
         const profileCount = profileInfo._count.listings;
 
         profileInsert.innerHTML += `
-        <!-- Product card -->
+        <!-- Profile card -->
         <div class="flex-shrink w-64">
         <div
           class="bg-slate-700 outline outline-1 outline-slate-500 rounded-md h-48"
@@ -64,7 +64,7 @@ export function requestProfile() {
         <li>Edit profile</li>
       </ul>
       </div>
-        <!-- Product card END -->
+        <!-- Profile card END -->
         `;
 
         for (let i = 0; i < profileInfo.listings.length; i++) {
