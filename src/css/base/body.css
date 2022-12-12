@@ -31,6 +31,8 @@
 
 @layer base {
   .img-style {
+    width: 174px;
+    height: 124px;
     object-fit: cover;
     margin: 0px auto;
     padding: 4px;
