@@ -26,3 +26,19 @@
     /* filter: brightness(100%); */
   }
 }
+
+/* Image style */
+
+@layer base {
+  .img-style {
+    object-fit: cover;
+    margin: 0px auto;
+    padding: 4px;
+  }
+}
+
+@layer base {
+  #profileImg {
+    object-fit: cover;
+  }
+}
