@@ -15,6 +15,7 @@ const btnClose = document.querySelector('#close');
 import { API_HOST_LOGIN } from '../auth/apiBase.js';
 import { redirect } from '../../components/function.js';
 import { errorMessage, successMessage } from '../../components/message.js';
+import * as storage from '../storage/index.js';
 
 /* const method = 'POST';
 const body = 'JSON.stringify(data)'; */
@@ -63,6 +64,8 @@ export function loginUser() {
         //console.log(json);
 
         if (response.ok === true) {
+          // Save only the accessToken to the localStorage
+          storage.save('token', accessToken);
           localStorage.setItem('myToken', accessToken);
           localStorage.setItem('myName', json.name);
           localStorage.setItem('myEmail', json.email);
