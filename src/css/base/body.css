@@ -44,3 +44,11 @@
     object-fit: cover;
   }
 }
+
+@layer base {
+  #galleryImg {
+    object-fit: cover;
+    width: 74px;
+    height: 56px;
+  }
+}

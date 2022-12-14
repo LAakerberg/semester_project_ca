@@ -117,6 +117,24 @@ input[type='password']:focus-visible {
   transition: 1s;
 }
 
+input[type='number'] {
+  background-color: #21374d;
+  outline: 1px solid #de910b;
+  outline-offset: 0px;
+  border-radius: 10px;
+  width: 100px;
+  box-sizing: border-box;
+  padding: 6px;
+  transition: 0.5s;
+  font-size: 0.8rem;
+}
+
+input[type='number']:focus-visible {
+  outline: 3px solid #de910b;
+  outline-offset: 0px;
+  transition: 0.5s;
+}
+
 a {
   text-decoration: none;
   transition: 0.4s;
