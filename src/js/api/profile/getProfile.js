@@ -82,7 +82,7 @@ export function requestProfile() {
 
           activeListings.innerHTML += `
         <!-- Product card -->
-        <a href="/pages/listings/specific/?id=${profileInfo.listings[i].id}"
+        <a href="/pages/listings/specific/?id=${profileInfo.listings[i].id}"/>
         <div
           class="bg-slate-600 outline outline-1 hover:outline-2 outline-slate-500 rounded-lg w-44 h-48 shadow-lg hover:shadow-slate-400/50"
         >

@@ -47,11 +47,13 @@ export function requestListings() {
 
           const listingsTitle = listingsResults[i].title.slice(0, 20);
           const listingsMedia = listingsResults[i].media[0];
+          const listings = listingsResults[i].id;
           //const listingsCreated = listingsResults[i].created;
           const listingsEnd = newFormat;
 
           auctionListings.innerHTML += `
         <!-- Product card -->
+        <a href="/pages/listings/specific/?id=${listings}"/>
         <div
           class="bg-slate-600 outline outline-1 hover:outline-2 outline-slate-500 rounded-lg w-44 h-48 shadow-lg hover:shadow-slate-400/50"
         >
@@ -64,6 +66,7 @@ export function requestListings() {
           <div class="p-1">${listingsTitle}</div>
           <div class="p-1">Ends: ${listingsEnd}</div>
         </div>
+        </a>
         <!-- Product card END -->
         `;
         }
