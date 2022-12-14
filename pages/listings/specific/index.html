@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <script src="/src/js/api//listings/index.js" type="module" defer></script> -->
+    <script src="/src/js/api//listings/index.js" type="module" defer></script>
+    <script
+      src="/src/js/api/listings/specific/specificList.js"
+      type="module"
+      defer
+    ></script>
 
     <meta
       name="description"
@@ -87,7 +92,7 @@
         </div>
         <!-- Header with information text -->
         <div class="absolute top-40 xl:top-20 left-10">
-          <h1 class="zero-font-ubuntu text-4xl uppercase">
+          <h1 class="zero-font-ubuntu text-2xl sm:text-4xl uppercase">
             Welcome to ZERO-BUD
           </h1>
           <span class="zero-font-ubunt text-lg pl-8 uppercase"
@@ -111,68 +116,81 @@
 
     <main class="flex flex-col p-3 items-center zero-font-niramit">
       <!-- Section with the profile information -->
-      <section class="md:w-5/6 lg:w-4/6 m-0 p-0">
+      <section class="w-full sm:w-5/6 lg:w-4/6 m-0 p-0">
         <div class="flex flex-row py-4">
           <div class="flex-shrink w-36">
-            <h2 class="text-2xl">Profile</h2>
+            <h2 class="text-2xl">Product</h2>
           </div>
         </div>
         <div
           id="profile"
-          class="bg-slate-600 outline outline-1 outline-slate-500 rounded-sm shadow-lg shadow-slate-400/30 p-1 min-h-64 max-h-80 flex flex-row gap-2"
+          class="bg-slate-600 outline outline-1 outline-slate-500 rounded-sm shadow-lg shadow-slate-400/30 p-1 min-h-64 max-h-min flex flex-col md:flex-row gap-2"
         >
           <!-- Profile card -->
-          <div class="flex-shrink w-64">
+          <div class="flex-shrink w-64 self-center">
             <div
-              class="bg-slate-700 outline outline-1 outline-slate-500 rounded-md h-48"
+              id="list-images"
+              class="bg-slate-700 outline outline-1 outline-slate-500 rounded-md h-48 items-center"
+            ></div>
+            <!-- innerHTML (Media/Images) -->
+            <div
+              id="list-gallery"
+              class="grid grid-cols-3 gap-4 py-2 justify-items-center"
             >
-              <img
-                src="${profileAvatar}"
-                id="profileImg"
-                class="rounded-md h-48"
-              />
-            </div>
-            <div class="grid grid-cols-3 gap-4">
-              <div class="">image1</div>
-              <div class="">image</div>
-              <div class="">image</div>
-              <div class="">image</div>
-              <div class="">image</div>
+              <!-- innerHTML (Media/Images from gallery) -->
             </div>
           </div>
-          <div class="flex-1">
-            <span>Title:</span>
-            ${profileName}
+          <div class="flex-1 flex flex-col justify-between">
+            <div
+              id="list-title"
+              class="text-xl underline underline-offset-4 pb-1"
+            >
+              <!-- innerHTML (Title) -->
+            </div>
+            <div id="list-description" class="flex-1">
+              <!-- innerHTML (Description) -->
+            </div>
+            <div id="list-tags" class="order-last italic py-2">
+              <!-- innerHTML (Tags) -->
+            </div>
+          </div>
+          <div class="flex-grow-0 w-40">
+            <div>Add a bid</div>
             <div>
-              <div>Description:</div>
+              <input
+                id="sliderBid"
+                type="range"
+                min="1"
+                max="1000"
+                value="500"
+              />
+              <div class="flex flex-row gap-2">
+                <div id="sliderBidValue" class="range-number"></div>
+                <div>
+                  <button class="range-number" value="Send">Bid</button>
+                </div>
+              </div>
+              <div>Highest bid: 550</div>
             </div>
-          </div>
-          <div class="flex-grow-0">
-            <ul>
-              <li>Add new listings</li>
-              <li>Edit profile</li>
-            </ul>
           </div>
           <!-- Profile card END -->
         </div>
       </section>
       <!-- Section with information about the site -->
       <!-- Section with the active listings -->
-      <section class="md:w-5/6 lg:w-4/6 m-0 p-0">
+      <section class="w-full md:w-5/6 lg:w-4/6 m-0 p-0">
         <div class="flex flex-row py-4">
           <div class="flex-shrink w-36">
             <h2 class="text-xl">All bids</h2>
           </div>
         </div>
         <div
-          id="active-list"
-          class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 justify-items-center m-1 p-1"
+          id="list-bids"
+          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 py-4 justify-items-center"
         >
-          <!-- Profile cards inserted -->
-          <!-- Profile cards inserted END -->
+          <!-- All bids inserted -->
         </div>
       </section>
-      <!-- Section with information about the site -->
     </main>
     <!-- End of Main body-->
     <!-- Footer in the bottom-->
