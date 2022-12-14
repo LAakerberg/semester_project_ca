@@ -82,6 +82,7 @@ export function requestProfile() {
 
           activeListings.innerHTML += `
         <!-- Product card -->
+        <a href="/pages/listings/specific/?id=${profileInfo.listings[i].id}"
         <div
           class="bg-slate-600 outline outline-1 hover:outline-2 outline-slate-500 rounded-lg w-44 h-48 shadow-lg hover:shadow-slate-400/50"
         >
@@ -94,6 +95,7 @@ export function requestProfile() {
           <div class="p-1">${profileInfo.listings[i].title.slice(0, 27)}</div>
           <div class="p-1">Ends: ${newFormat}</div>
         </div>
+        </a>
         <!-- Product card END -->
         `;
         }

@@ -15,3 +15,7 @@ openRegisterForm();
 import { registerUser } from './api/login/register.js';
 
 registerUser();
+
+/* When visit the homepage "First index.html", clear the localStorage.
+This will push the user to login again.  */
+localStorage.clear();

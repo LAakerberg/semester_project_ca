@@ -4,6 +4,7 @@ const auctionListings = document.querySelector('#auction-list');
 import { API_HOST_LISTINGS } from '../auth/apiBase.js';
 import { authFetch } from '../auth/authFetch.js';
 import { headers } from '../auth/authFetch.js';
+//import { correctDate } from '../auth/authFetch.js';
 
 const method = 'GET';
 
@@ -26,29 +27,28 @@ export function requestListings() {
       console.log(response);
       console.log(listingsResults);
 
-      const dateRequested = new Date(`${listingsResults[0].endsAt}`);
-      // Formats the date from the request to be more user friendly and readable
-      const dateFormatted = {
-        year: 'numeric',
-        month: 'numeric',
-        day: 'numeric',
-      };
-      const newFormat = dateRequested.toLocaleDateString(
-        'en-GB',
-        dateFormatted
-      );
-
-      /*     if (response.ok === true) {
-      console.log('True');
-    } */
-
       for (let i = 0; i < listingsResults.length; i++) {
         if (response.ok === true) {
-          const listingsID = listingsResults[i].id;
+          const dateRequested = new Date(`${listingsResults[i].endsAt}`);
+          // Formats the date from the request to be more user friendly and readable
+          const dateFormatted = {
+            year: 'numeric',
+            month: 'numeric',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+          };
+          const newFormat = dateRequested.toLocaleDateString(
+            'en-GB',
+            dateFormatted
+          );
+
+          //const dateTime = correctDate(listingsResults[i].endsAt);
+
           const listingsTitle = listingsResults[i].title.slice(0, 20);
           const listingsMedia = listingsResults[i].media[0];
-          const listingsCreated = listingsResults[i].created;
-          const listingsEnd = listingsResults[i].endsAt;
+          //const listingsCreated = listingsResults[i].created;
+          const listingsEnd = newFormat;
 
           auctionListings.innerHTML += `
         <!-- Product card -->
@@ -62,7 +62,7 @@ export function requestListings() {
             />
           </div>
           <div class="p-1">${listingsTitle}</div>
-          <div class="p-1">Ends: ${newFormat}</div>
+          <div class="p-1">Ends: ${listingsEnd}</div>
         </div>
         <!-- Product card END -->
         `;
