@@ -8,7 +8,7 @@ import { headers } from '../auth/authFetch.js';
 
 const method = 'GET';
 
-auctionListings.innerHTML = ``;
+//auctionListings.innerHTML = ``;
 
 export function requestListings() {
   async function getListings(url) {
@@ -48,6 +48,7 @@ export function requestListings() {
           const listingsTitle = listingsResults[i].title.slice(0, 20);
           const listingsMedia = listingsResults[i].media[0];
           const listings = listingsResults[i].id;
+          //const listingsBids = listingsResults[i].bids[0].amount;
           //const listingsCreated = listingsResults[i].created;
           const listingsEnd = newFormat;
 
@@ -55,7 +56,7 @@ export function requestListings() {
         <!-- Product card -->
         <a href="/pages/listings/specific/?id=${listings}"/>
         <div
-          class="bg-slate-600 outline outline-1 hover:outline-2 outline-slate-500 rounded-lg w-44 h-48 shadow-lg hover:shadow-slate-400/50"
+          class="bg-slate-600 outline outline-1 hover:outline-2 outline-slate-500 rounded-lg w-44 shadow-lg hover:shadow-slate-400/50"
         >
           <div class="h-4/6 border-b-2 border-slate-500">
             <img
@@ -77,5 +78,5 @@ export function requestListings() {
     }
   }
 
-  getListings(`${API_HOST_LISTINGS}?_active=true`);
+  getListings(`${API_HOST_LISTINGS}?_bids=true&_active=true`);
 }

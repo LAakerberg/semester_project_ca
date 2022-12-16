@@ -77,6 +77,7 @@ async function getSpecificList(url) {
     // Show all active bids on the product
 
     for (let i = 0; i < specificResults.bids.length; i++) {
+      const specBidsEmpty = specificResults.bids[0];
       const specBids = specificResults.bids[i];
       const specBidsAmount = specificResults.bids[i].amount;
 
@@ -94,7 +95,7 @@ async function getSpecificList(url) {
       `;
     }
 
-    /*     for (let i = 0; i < specificResults.bids.length; i++) {
+    /*         for (let i = 0; i < specificResults.bids.length; i++) {
       const specBids = specificResults.bids[i];
       specificBids.innerHTML += `
       
