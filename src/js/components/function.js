@@ -8,7 +8,7 @@
  */
 export function redirect(response) {
   if (response.ok == true) {
-    window.location.replace('/pages/');
+    window.location.replace('/pages/profile/');
   } else {
     //return errorMessage('');
   }
