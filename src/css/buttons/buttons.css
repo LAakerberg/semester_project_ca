@@ -40,7 +40,7 @@ select {
   padding: 6px;
   width: 180px;
   transition: 1s;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 select:focus-visible {
@@ -56,7 +56,7 @@ input[type='date'] {
   padding: 6px;
   width: 180px;
   transition: 1s;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 input[type='date']:focus-visible {
@@ -72,7 +72,7 @@ input[type='search'] {
   padding: 6px;
   width: 180px;
   transition: 1s;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 input[type='search']:focus-visible {
@@ -90,7 +90,7 @@ input[type='name'],
   border-radius: 10px;
   box-sizing: border-box;
   padding: 6px;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 input[type='name']:focus-visible,
@@ -108,7 +108,7 @@ input[type='password'] {
   box-sizing: border-box;
   padding: 6px;
   transition: 1s;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 input[type='password']:focus-visible {
@@ -126,7 +126,7 @@ input[type='number'] {
   box-sizing: border-box;
   padding: 6px;
   transition: 0.5s;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 input[type='number']:focus-visible {

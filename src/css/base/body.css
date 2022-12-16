@@ -41,9 +41,8 @@
 
 @layer base {
   #profileImg {
-    width: 256px;
-    height: 12rem;
-    object-fit: cover;
+    width: 100%;
+    object-fit: contain;
   }
 }
 
