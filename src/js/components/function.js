@@ -14,6 +14,14 @@ export function redirect(response) {
   }
 }
 
+export function reloadPage(response) {
+  if (response.ok == true) {
+    window.location.reload();
+  } else {
+    //return errorMessage('');
+  }
+}
+
 export function logOutUser() {
   const logOut = document.querySelector('#logout');
 
@@ -24,4 +32,13 @@ export function logOutUser() {
       window.location.replace('/index.html');
     }, 2000);
   };
+}
+
+export function dateToHour(date) {
+  const currentDate = new Date();
+  const newDate = new Date(date);
+  const timeSince = currentDate - newDate;
+  const hours = Math.floor(timeSince / (1000 * 60 * 60));
+  const minutes = Math.floor((timeSince / 1000 / 60) % 60);
+  return `${hours}h ${minutes}m`;
 }
