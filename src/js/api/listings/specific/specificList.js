@@ -39,11 +39,11 @@ async function getSpecificList(url) {
 
       specificImg.innerHTML += `
       
-      <div class="bg-slate-700 outline outline-1 outline-slate-500 rounded-md h-48 items-center">
+      <div class="bg-slate-700 outline outline-1 outline-slate-500 rounded-md items-center">
         <img
           src="${specificResults.media[0]}"
           id="profileImg"
-          class="rounded-md w-64 h-48"
+          class="rounded-md"
         />
       </div>`;
     specificTitle.innerHTML += `${specificResults.title}`;
