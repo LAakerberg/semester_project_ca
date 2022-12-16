@@ -49,7 +49,9 @@
           <nav
             class="h-16 zero-text-color w-full sm:w-4/5 m-auto p-0 text-center flex place-content-center static"
           >
-            <div class="flex-shrink w-40 m-auto zero-font-style-1">
+            <div
+              class="flex-shrink w-40 m-auto zero-font-acme mobile:text-xl tablet:text-2xl"
+            >
               <span>ZERO BUD</span>
               <span class="material-symbols-outlined text-lg sm:text-3xl">
                 home
@@ -65,7 +67,9 @@
             <div
               class="bg-slate-600 flex-shrink m-auto absolute top-20 p-1 sm:p-2 rounded-lg"
             >
-              <ul class="zero-font-style-10 sm:zero-font-style-1">
+              <ul
+                class="zero-font-acme mobile:text-xl tablet:text-2xl uppercase"
+              >
                 <li class="px-2">
                   <a href="/pages/index.html" class="">Home</a>
                 </li>
@@ -74,15 +78,9 @@
                 <li class="px-2"><a href="" class="">Contact</a></li>
               </ul>
             </div>
-            <div class="flex-shrink w-52 m-auto zero-font-style-1">
+            <div class="flex-shrink w-52 m-auto">
               <span class="material-symbols-outlined text-lg sm:text-3xl">
                 account_circle
-              </span>
-              <span class="material-symbols-outlined text-lg sm:text-3xl">
-                favorite
-              </span>
-              <span class="material-symbols-outlined text-lg sm:text-3xl">
-                shopping_cart
               </span>
               <a href="/index.html" id="logout">
                 <span class="material-symbols-outlined text-lg sm:text-3xl">
@@ -248,7 +246,7 @@
                                   />
                                 </div>
                                 <button
-                                  class="btn-secondary mr-1 zero-font-style-1 items-start"
+                                  class="btn-secondary mr-1 zero-font-acme mobile:text-xl tablet:text-2xl items-start"
                                   id="register"
                                 >
                                   Change
@@ -287,19 +285,18 @@
               id="profileImage"
               class="bg-slate-700 outline outline-1 outline-slate-500 rounded-md h-48"
             ></div>
+            <div class="pt-2 zero-font-acme text-xl xl:text-2xl text-center">
+              <button class="btn-secondary" id="openEditModal">
+                <span class="material-symbols-outlined text-lg"> edit </span
+                >Edit profile
+              </button>
+            </div>
           </div>
-          <div id="profile-info" class="flex-1">
+          <div id="profile-info" class="flex-1 zero-font-niramit text-xl">
             <!-- Insert of profile information-->
           </div>
-          <div class="flex-grow-0 zero-font-style-1">
-            <button class="btn-secondary mr-1" id="loginBtn">
-              <span class="material-symbols-outlined text-sm"> add_box </span
-              >Add new listings
-            </button>
-            <button class="btn-secondary ml-1" id="openEditModal">
-              <span class="material-symbols-outlined text-sm"> edit </span>Edit
-              profile
-            </button>
+          <div class="flex-grow-0 zero-font-acme text-xl xl:text-2xl">
+            <div class="p-1"></div>
           </div>
           <!-- Profile card END -->
         </div>
@@ -307,14 +304,23 @@
       <!-- Section with information about the site -->
       <!-- Section with the active listings -->
       <section class="w-full md:w-5/6 lg:w-4/6 m-0 p-0">
-        <div class="flex flex-row py-4">
-          <div class="flex-shrink w-36">
-            <h2 class="text-xl">Active listings</h2>
+        <div class="flex flex-col sm:flex-row py-4">
+          <div class="flex-shrink w-40 text-center self-center">
+            <h2 class="text-xl uppercase">All listings</h2>
+          </div>
+          <div
+            class="flex w-full justify-center sm:justify-end zero-font-acme text-xl xl:text-2xl"
+          >
+            <button class="btn-primary" id="loginBtn">
+              <span class="material-symbols-outlined text-lg text-black">
+                add_box </span
+              >new listings
+            </button>
           </div>
         </div>
         <div
           id="active-list"
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 justify-items-center m-1 p-1"
+          class="grid grid-cols-1 mobile:grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-10 justify-items-center m-1 p-1"
         >
           <!-- Product cards inserted -->
         </div>

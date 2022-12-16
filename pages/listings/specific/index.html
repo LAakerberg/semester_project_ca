@@ -55,7 +55,9 @@
           <nav
             class="h-16 zero-text-color w-4/5 m-auto p-0 text-center flex place-content-center static"
           >
-            <div class="flex-shrink w-40 m-auto zero-font-style-1">
+            <div
+              class="flex-shrink w-40 m-auto zero-font-acme mobile:text-xl tablet:text-2xl"
+            >
               <span>ZERO BUD</span>
               <span class="material-symbols-outlined"> home </span>
             </div>
@@ -69,7 +71,9 @@
             <div
               class="bg-slate-600 flex-shrink m-auto absolute top-20 p-2 rounded-lg"
             >
-              <ul class="zero-font-style-1">
+              <ul
+                class="zero-font-acme mobile:text-xl tablet:text-2xl uppercase"
+              >
                 <li class="px-2">
                   <a href="/pages/index.html" class="">Home</a>
                 </li>
@@ -78,10 +82,10 @@
                 <li class="px-2"><a href="" class="">Contact</a></li>
               </ul>
             </div>
-            <div class="flex-shrink w-52 m-auto zero-font-style-1">
+            <div
+              class="flex-shrink w-52 m-auto zero-font-acme mobile:text-xl tablet:text-2xl"
+            >
               <span class="material-symbols-outlined"> account_circle </span>
-              <span class="material-symbols-outlined"> favorite </span>
-              <span class="material-symbols-outlined"> shopping_cart </span>
               <a href="/index.html" id="logout">
                 <span class="material-symbols-outlined"> logout </span>
               </a>
@@ -124,13 +128,13 @@
         </div>
         <div
           id="profile"
-          class="bg-slate-600 outline outline-1 outline-slate-500 rounded-sm shadow-lg shadow-slate-400/30 p-1 min-h-64 max-h-min flex flex-col md:flex-row gap-2"
+          class="bg-slate-600 outline outline-1 outline-slate-500 rounded-sm shadow-lg shadow-slate-400/30 p-1 h-auto flex flex-col md:flex-row gap-2"
         >
           <!-- Profile card -->
-          <div class="flex-shrink w-64 self-center">
+          <div class="flex-1 w-9/12 md:flex-none md:w-80 mx-auto my-0">
             <div
               id="list-images"
-              class="bg-slate-700 outline outline-1 outline-slate-500 rounded-md h-48 items-center"
+              class="bg-slate-700 outline outline-1 outline-slate-500 rounded-md items-center"
             ></div>
             <!-- innerHTML (Media/Images) -->
             <div
@@ -140,7 +144,7 @@
               <!-- innerHTML (Media/Images from gallery) -->
             </div>
           </div>
-          <div class="flex-1 flex flex-col justify-between">
+          <div class="flex flex-1 flex-col justify-between">
             <div
               id="list-title"
               class="text-xl underline underline-offset-4 pb-1"

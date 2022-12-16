@@ -20,7 +20,9 @@
           class="flex flex-row bg-color-nav opacity-95 h-16 max-h-16 absolute w-full place-content-center"
         >
           <div class="flex-shrink w-36 m-auto text-center">
-            <p class="zero-font-style-1">ZERO BUD</p>
+            <p class="zero-font-acme text-lg mobile:text-xl tablet:text-2xl">
+              ZERO BUD
+            </p>
           </div>
           <div class="flex-shrink m-auto inline-flex hidden">
             <ul class="zero-font-style-1 inline-flex">
@@ -37,7 +39,9 @@
               />
             </div>
           </div>
-          <div class="flex-shrink w-52 m-auto zero-font-style-1">
+          <div
+            class="flex-shrink w-52 m-auto zero-font-acme mobile:text-xl tablet:text-2xl"
+          >
             <button class="btn-secondary mr-1" id="loginBtn">Log in</button>
             <button class="btn-primary ml-1" id="registerBtn">Sign UP</button>
           </div>
@@ -45,7 +49,7 @@
           <nav
             class="h-16 zero-text-color w-4/5 m-auto p-0 text-center flex place-content-center hidden"
           >
-            <div class="flex-shrink w-36 m-auto zero-font-style-1">
+            <div class="flex-shrink w-36 m-auto">
               <p>ZERO BUD</p>
             </div>
             <div class="flex-shrink w-64 m-auto">
@@ -56,33 +60,39 @@
               />
             </div>
             <div class="flex-shrink m-auto">
-              <ul class="zero-font-style-1">
+              <ul class="">
                 <li class="px-1">Home</li>
                 <li class="px-1">Products</li>
                 <li class="px-1">About</li>
                 <li class="px-1">Contact</li>
               </ul>
             </div>
-            <div class="flex-shrink w-52 m-auto zero-font-style-1">
+            <div class="flex-shrink w-52 m-auto zero-font-acme text-lg">
               <button class="btn-secondary mr-1" id="loginBtn">Log in</button>
               <button class="btn-primary ml-1" id="registerBtn">Sign UP</button>
             </div>
           </nav>
         </div>
         <!-- Header with information text -->
-        <div class="absolute top-20 left-16">
-          <h1 class="zero-font-ubuntu text-4xl uppercase">
+        <div class="absolute top-20 left-5">
+          <h1
+            class="zero-font-ubuntu text-lg mobile:text-2xl tablet:text-3xl md:text-4xl uppercase"
+          >
             Welcome to ZERO-BUD
           </h1>
-          <span class="zero-font-ubunt text-lg pl-8 uppercase"
+          <span class="zero-font-ubunt text-xl tablet:text-2xl pl-6 uppercase"
             >For gamers By gamers...</span
           >
         </div>
         <div
-          class="bg-slate-700/90 border border-sky-600 sm:w-fit top-52 m-1 md:w-96 rounded-lg absolute md:top-44 md:right-2 lg:right-16 p-4"
+          class="bg-slate-700/90 border border-sky-600 sm:w-fit top-40 m-1 md:w-96 rounded-lg absolute md:top-44 md:right-2 lg:right-16 p-4"
         >
-          <h1 class="zero-font-ubuntu text-3xl">Find your next game</h1>
-          <span class="zero-font-ubunt text-sm"
+          <h1
+            class="zero-font-ubuntu text-xl md:text-2xl lg:text-3xl font-bold underline underline-offset-4 pb-2"
+          >
+            Find your next game
+          </h1>
+          <span class="zero-font-ubunt text-base"
             >Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s.</span
@@ -100,7 +110,7 @@
           <div class="fixed inset-0 overflow-hidden">
             <div class="absolute inset-0 overflow-hidden">
               <div
-                class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10"
+                class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full"
               >
                 <!--
                   Slide-over panel, show/hide based on slide-over state.
@@ -124,17 +134,17 @@
                       To: "opacity-0"
                   -->
                   <div
-                    class="absolute top-0 left-0 -ml-8 flex pt-4 pr-2 sm:-ml-10 sm:pr-4"
+                    class="absolute top-0 right-4 flex pt-4 pr-2 sm:pr-4 z-10"
                   >
                     <button
                       id="close"
                       type="button"
-                      class="bg-slate-500 hover:bg-slate-800 rounded-md border border-orange-400 text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
+                      class="bg-slate-800 hover:bg-slate-500 rounded-md border border-orange-400 text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
                     >
-                      <span class="sr-only">Close panel</span>
+                      <span class="sr-only text-lg">Close panel</span>
                       <!-- Heroicon name: outline/x-mark -->
                       <svg
-                        class="h-6 w-6"
+                        class="h-10 w-10"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
@@ -156,7 +166,7 @@
                   >
                     <div class="px-4 sm:px-6">
                       <h2
-                        class="text-lg font-medium text-gray-300"
+                        class="text-2xl font-medium text-gray-300"
                         id="slide-over-title"
                       >
                         Login
@@ -193,7 +203,7 @@
                                 </div>
                                 <button
                                   type="submit"
-                                  class="btn-secondary mr-1 zero-font-style-1 items-start"
+                                  class="btn-secondary mr-1 zero-font-acme mobile:text-xl tablet:text-2xl items-start"
                                   id="login-btn"
                                 >
                                   Log in
@@ -221,7 +231,7 @@
           <div class="fixed inset-0 overflow-hidden">
             <div class="absolute inset-0 overflow-hidden">
               <div
-                class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10"
+                class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full"
               >
                 <!--
                   Slide-over panel, show/hide based on slide-over state.
@@ -245,17 +255,17 @@
                       To: "opacity-0"
                   -->
                   <div
-                    class="absolute top-0 left-0 -ml-8 flex pt-4 pr-2 sm:-ml-10 sm:pr-4"
+                    class="absolute top-0 right-4 flex pt-4 pr-2 sm:pr-4 z-10"
                   >
                     <button
                       id="signup-close"
                       type="button"
-                      class="bg-slate-500 hover:bg-slate-800 rounded-md border border-orange-400 text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
+                      class="bg-slate-800 hover:bg-slate-500 rounded-md border border-orange-400 text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
                     >
-                      <span class="sr-only">Close panel</span>
+                      <span class="sr-only text-lg">Close panel</span>
                       <!-- Heroicon name: outline/x-mark -->
                       <svg
-                        class="h-6 w-6"
+                        class="h-10 w-10"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
@@ -277,7 +287,7 @@
                   >
                     <div class="px-4 sm:px-6">
                       <h2
-                        class="text-lg font-medium text-gray-300"
+                        class="text-2xl font-medium text-gray-300"
                         id="slide-over-title"
                       >
                         Sign up
@@ -337,7 +347,7 @@
                                   />
                                 </div>
                                 <button
-                                  class="btn-secondary mr-1 zero-font-style-1 items-start"
+                                  class="btn-secondary mr-1 zero-font-acme mobile:text-xl tablet:text-2xl items-start"
                                   id="register"
                                 >
                                   Register
