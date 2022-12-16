@@ -55,8 +55,10 @@ input[type='date'] {
   border-radius: 10px;
   padding: 6px;
   width: 180px;
+  height: 45px;
   transition: 1s;
   font-size: 1rem;
+  color: #ffffff;
 }
 
 input[type='date']:focus-visible {
@@ -140,12 +142,12 @@ input:disabled {
   color: rgb(165, 165, 165);
 }
 
-a {
+nav a {
   text-decoration: none;
   transition: 0.4s;
 }
 
-a:hover {
+nav a:hover {
   text-decoration: underline;
   transition: 0.4s;
   text-shadow: 0 0 20px #de600b;

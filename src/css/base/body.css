@@ -41,15 +41,14 @@
 
 @layer base {
   #profileImg {
-    width: 100%;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
 @layer base {
   #galleryImg {
     object-fit: cover;
-    width: 74px;
-    height: 56px;
+    height: 100%px;
   }
 }

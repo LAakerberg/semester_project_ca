@@ -33,6 +33,8 @@ export function requestProfile() {
       const json = await response.json(API_HOST_PROFILES);
       const profileInfo = json;
 
+      console.log(profileInfo);
+
       editProfile();
 
       if (response.ok === true && profileEmail === profileInfo.email) {
@@ -60,7 +62,7 @@ export function requestProfile() {
         `;
 
         for (let i = 0; i < profileInfo.listings.length; i++) {
-          const dateRequested = new Date(`${profileInfo.listings[0].endsAt}`);
+          const dateRequested = new Date(`${profileInfo.listings[i].endsAt}`);
           // Formats the date from the request to be more user friendly and readable
           const dateFormatted = {
             year: 'numeric',
@@ -84,7 +86,7 @@ export function requestProfile() {
               class="img-style rounded-t-lg p-1"
             />
           </div>
-          <div class="p-1">${profileInfo.listings[i].title.slice(0, 27)}</div>
+          <div class="p-1">${profileInfo.listings[i].title.slice(0, 25)}</div>
           <div class="p-1">Ends: ${newFormat}</div>
         </div>
         </a>

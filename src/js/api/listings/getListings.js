@@ -56,12 +56,12 @@ export function requestListings() {
         <!-- Product card -->
         <a href="/pages/listings/specific/?id=${listings}"/>
         <div
-          class="bg-slate-600 outline outline-1 hover:outline-2 outline-slate-500 rounded-lg w-44 shadow-lg hover:shadow-slate-400/50"
+          class="bg-slate-600 outline outline-1 hover:outline-2 outline-slate-500 rounded-lg w-48 shadow-lg hover:shadow-slate-400/50"
         >
           <div class="h-4/6 border-b-2 border-slate-500">
             <img
               src="${listingsMedia}"
-              class="img-style rounded-t-lg w-44 h-32"
+              class="img-style rounded-t-lg w-48 h-32"
             />
           </div>
           <div class="p-1">${listingsTitle}</div>

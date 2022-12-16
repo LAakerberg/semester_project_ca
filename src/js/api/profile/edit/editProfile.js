@@ -37,8 +37,8 @@ export async function collectProfileData(url) {
     const profileInfoData = json;
 
     // Collect the existing information and add it to the form
-    editProfileForm.name.value = profileInfoData.name;
-    editProfileForm.email.value = profileInfoData.email;
+    /*     editProfileForm.name.value = profileInfoData.name;
+    editProfileForm.email.value = profileInfoData.email; */
     editProfileForm.avatar.value = profileInfoData.avatar;
 
     /*     const insertProfileData = {
@@ -73,7 +73,7 @@ editProfileForm.addEventListener(`submit`, (e) => {
    */
   async function updateProfileData(url) {
     try {
-      //const method = 'PUT';
+      const method = 'PUT';
       const response = await authFetch(
         url,
         {
