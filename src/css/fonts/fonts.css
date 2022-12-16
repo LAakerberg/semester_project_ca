@@ -27,6 +27,14 @@
 }
 
 @layer base {
+  .zero-font-style-10 {
+    font-family: Acme;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+}
+
+@layer base {
   .zero-font-style-2 {
     font-family: Ubuntu;
     text-transform: uppercase;

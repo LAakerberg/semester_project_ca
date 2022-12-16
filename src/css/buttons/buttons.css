@@ -135,6 +135,11 @@ input[type='number']:focus-visible {
   transition: 0.5s;
 }
 
+input:disabled {
+  border: 1px solid rgb(139, 3, 3);
+  color: rgb(165, 165, 165);
+}
+
 a {
   text-decoration: none;
   transition: 0.4s;
