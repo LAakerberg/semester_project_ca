@@ -5,7 +5,7 @@
  * @returns Return a user friendly error message about issues with the process.
  */
 export function errorMessage(message = 'Unknown error have occurred!') {
-  return `<div class="border border-error text-center p-2 px-4">${message}</div>`;
+  return `<div class="bg-slate-800 border border-error text-center p-2 px-4">${message}</div>`;
 }
 
 /**
@@ -15,7 +15,7 @@ export function errorMessage(message = 'Unknown error have occurred!') {
  * @returns Return a user friendly error message about issues with the process.
  */
 export function successMessage(message = 'Actions was successful!') {
-  return `<div class="border border-success text-center p-2 px-4">${message}</div>`;
+  return `<div class="bg- border border-success text-center p-2 px-4">${message}</div>`;
 }
 
 //<div class="success-card border border-success text-center p-2 px-4">Logged in is success, you will be redirected</div>
