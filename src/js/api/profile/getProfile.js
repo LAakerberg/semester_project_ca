@@ -1,14 +1,19 @@
 const profileInsert = document.querySelector('#profile');
 const activeListings = document.querySelector('#active-list');
+const profileImage = document.querySelector('#profileImage');
+const profileData = document.querySelector('#profile-info');
+const editProfileForm = document.querySelector('#editProfile');
 
 // Importing API link + fetch functions for async function
 import { API_HOST_PROFILES } from '../auth/apiBase.js';
 import { authFetch } from '../auth/authFetch.js';
 import { headers } from '../auth/authFetch.js';
+import { editProfile } from './edit/editProfile.js';
+import { errorMessage, successMessage } from '../../components/message.js';
 
 const method = 'GET';
 
-profileInsert.innerHTML = ``;
+//profileInsert.innerHTML = ``;
 activeListings.innerHTML = ``;
 
 const profileIdentify = localStorage.getItem('myName');
@@ -28,7 +33,7 @@ export function requestProfile() {
       const json = await response.json(API_HOST_PROFILES);
       const profileInfo = json;
 
-      console.log(profileInfo);
+      editProfile();
 
       if (response.ok === true && profileEmail === profileInfo.email) {
         const profileName = profileInfo.name;
@@ -38,16 +43,10 @@ export function requestProfile() {
         const profileWins = profileInfo.wins.length;
         const profileCount = profileInfo._count.listings;
 
-        profileInsert.innerHTML += `
-        <!-- Profile card -->
-        <div class="flex-shrink w-64">
-        <div
-          class="bg-slate-700 outline outline-1 outline-slate-500 rounded-md h-48"
-        >
-          <img src="${profileAvatar}" id="profileImg" class="rounded-md h-48" />
-        </div>
-      </div>
-      <div class="flex-1"><span>Username:</span>
+        profileImage.innerHTML += `<img src="${profileAvatar}" id="profileImg" class="rounded-md" />`;
+        profileData.innerHTML += `
+        
+        <span>Username:</span>
       ${profileName}
         <div>
           <ul>
@@ -57,14 +56,7 @@ export function requestProfile() {
             <li><span>Count:</span> ${profileCount}</li>
           </ul>
         </div>
-      </div>
-      <div class="flex-grow-0">
-      <ul>
-        <li>Add new listings</li>
-        <li>Edit profile</li>
-      </ul>
-      </div>
-        <!-- Profile card END -->
+        
         `;
 
         for (let i = 0; i < profileInfo.listings.length; i++) {
@@ -100,7 +92,9 @@ export function requestProfile() {
         `;
         }
       } else {
-        console.log('No match');
+        profileData.innerHTML = errorMessage(
+          'Not able to collect the information! Try to log out & in again!'
+        );
       }
     } catch (error) {
       console.log('Error loading the auction house listings');
