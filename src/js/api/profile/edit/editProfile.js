@@ -37,17 +37,9 @@ export async function collectProfileData(url) {
     const profileInfoData = json;
 
     // Collect the existing information and add it to the form
-    /*     editProfileForm.name.value = profileInfoData.name;
-    editProfileForm.email.value = profileInfoData.email; */
+    editProfileForm.name.value = profileInfoData.name;
+    editProfileForm.email.value = profileInfoData.email;
     editProfileForm.avatar.value = profileInfoData.avatar;
-
-    /*     const insertProfileData = {
-      name: editProfileForm.name.value,
-      email: editProfileForm.email.value,
-      avatar: editProfileForm.avatar.value,
-    };
-
-    console.log(insertProfileData); */
   } catch (error) {
     console.log(error);
   }
