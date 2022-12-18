@@ -1,3 +1,30 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import '/src/css/base.css';
+
+@import 'tailwindcss/components';
+@import '/src/css/components.css';
+
+@import 'tailwindcss/utilities';
+
+@layer components {
+  .zero-text-color {
+    color: #e6e6e6;
+  }
+}
+
+@layer components {
+  nav li {
+    display: inline-block;
+  }
+}
+
+@layer components {
+  .header-img {
+    background-image: url(/assets/img/head-img.jpg);
+    /*filter: brightness(55%) saturate(140%);*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-y: top;
+  }
+}

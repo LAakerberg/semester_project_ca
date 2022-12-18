@@ -1,17 +1,24 @@
 {
   "name": "zero_bud",
   "private": true,
-  "version": "0.0.3",
+  "version": "0.1.7",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "format": "prettier -w src/**/*.js && prettier -w index.html && prettier -w pages/**/*.html"
+    "lint": "eslint src/**/*.js",
+    "lint-fix": "eslint src/**/*.js --cache --fix",
+    "format": "prettier -w src/**/*.js && prettier -w pages/**/*index.html",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
+    "eslint": "^8.28.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.4",
     "postcss": "^8.4.19",
+    "postcss-import": "^15.0.0",
     "prettier": "^2.8.0",
     "tailwindcss": "^3.2.4",
     "vite": "^3.2.3"
@@ -65,7 +72,6 @@
     "picocolors": "^1.0.0",
     "picomatch": "^2.3.1",
     "pify": "^2.3.0",
-    "postcss-import": "^14.1.0",
     "postcss-js": "^4.0.0",
     "postcss-load-config": "^3.1.4",
     "postcss-nested": "^6.0.0",
@@ -105,5 +111,17 @@
   "bugs": {
     "url": "https://github.com/LAakerberg/semester_project_ca/issues"
   },
-  "homepage": "https://github.com/LAakerberg/semester_project_ca#readme"
+  "homepage": "https://github.com/LAakerberg/semester_project_ca#readme",
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.html": [
+      "prettier --write"
+    ],
+    "*.scss": [
+      "prettier --write"
+    ]
+  }
 }

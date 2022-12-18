@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="/src/js/index.js" type="module" defer></script>
+    <!-- <script src="/src/js/index.js" type="module" defer></script> -->
+    <script src="/src/js/api/profile/index.js" type="module" defer></script>
     <meta
       name="description"
       content="Zero Bud - Your auction house for all games"
@@ -12,55 +13,67 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
     <link href="/src/css/style.css" rel="stylesheet" />
     <title>Zero Bud | Find your games</title>
   </head>
-
   <body class="zero-text-color">
     <!-- Header -->
-    <header class="h-96 max-h-96 zero-font-niramit">
-      <div class="header-img static h-96 max-h-96">
+    <header class="h-64 max-h-96 zero-font-niramit">
+      <div class="header-img static h-64 max-h-96">
         <div
-          class="flex flex-col mobile:flex-row bg-color-nav opacity-95 h-16 max-h-16 absolute w-full place-content-center"
+          class="flex flex-row bg-color-nav h-16 max-h-16 w-full place-content-center fixed top-0 z-10"
         >
-          <div class="flex-shrink m-auto text-center">
-            <p class="zero-font-acme text-lg mobile:text-xl tablet:text-2xl">
-              ZERO BUD
-            </p>
-          </div>
-          <div class="flex-shrink w-auto m-auto zero-font-acme text-2xl">
-            <button class="btn-secondary" id="openMenu">
-              <span class="material-symbols-outlined text-base mobile:text-xl">
-                menu
-              </span>
-            </button>
-            <button class="btn-secondary mr-1" id="loginBtn">Log in</button>
-            <button class="btn-primary mr-1" id="registerBtn">Sign UP</button>
-          </div>
+          <!-- Navigation section-->
+          <nav
+            class="h-16 zero-text-color w-full sm:w-4/5 m-auto p-0 text-center flex place-content-center static"
+          >
+            <!-- Navigation Logo-->
+            <div
+              class="flex-shrink w-40 m-auto zero-font-acme mobile:text-xl tablet:text-2xl"
+            >
+              <a href="/pages/index.html">
+                <span>ZERO BUD</span>
+                <span class="material-symbols-outlined text-lg sm:text-3xl">
+                  home
+                </span>
+              </a>
+            </div>
+            <!-- Navigation Logo END -->
+            <!-- Navigation menu -->
+            <div class="flex-shrink w-52 m-auto">
+              <div class="pt-2 zero-font-acme text-xl xl:text-2xl text-center">
+                <button class="btn-secondary" id="openMenu">
+                  <span class="material-symbols-outlined text-lg"> menu </span
+                  >Menu
+                </button>
+              </div>
+            </div>
+            <!-- Navigation menu END -->
+          </nav>
+          <!-- Navigation section END -->
         </div>
         <!-- Header with information text -->
-        <div class="absolute top-20 left-5">
-          <h1
-            class="zero-font-ubuntu text-lg mobile:text-2xl tablet:text-3xl md:text-4xl uppercase"
-          >
+        <div class="absolute top-40 xl:top-20 left-10">
+          <h1 class="zero-font-ubuntu text-4xl uppercase">
             Welcome to ZERO-BUD
           </h1>
-          <span class="zero-font-ubunt text-xl tablet:text-2xl pl-6 uppercase"
+          <span class="zero-font-ubunt text-lg pl-8 uppercase"
             >For gamers By gamers...</span
           >
         </div>
         <div
-          class="bg-slate-700/90 border border-sky-600 sm:w-fit top-40 m-1 md:w-96 rounded-lg absolute md:top-44 md:right-2 lg:right-16 p-4"
+          class="bg-slate-700/90 border border-sky-600 sm:w-fit top-52 m-1 md:w-96 rounded-lg absolute md:top-44 md:right-2 lg:right-16 p-4 hidden"
         >
-          <h1
-            class="zero-font-ubuntu text-xl md:text-2xl lg:text-3xl font-bold underline underline-offset-4 pb-2"
+          <h1 class="zero-font-ubuntu text-3xl">Find your next game</h1>
+          <span class="zero-font-ubunt text-sm"
+            >Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s.</span
           >
-            Find your next game
-          </h1>
-          <span class="zero-font-ubunt text-base"
-            >Find your next gaming product. We have everything from in-game
-            coins to hardware and software products. Come and join us now!
-          </span>
         </div>
       </div>
     </header>
@@ -162,9 +175,7 @@
                                   class="zero-font-acme text-xl tablet:text-2xl uppercase flex flex-col divide-y divide-dashed"
                                 >
                                   <li class="p-3">
-                                    <a href="/pages/index.html" class=""
-                                      >Home</a
-                                    >
+                                    <a href="./index.html" class="">Home</a>
                                   </li>
                                   <li class="p-3">
                                     <a
@@ -208,125 +219,25 @@
       </div>
 
       <!-- NAV MODAL END -->
-      <!-- Login modal -->
-      <div class="relative z-10 hidden transition-all" id="loginModal">
-        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity">
-          <div class="fixed inset-0 overflow-hidden">
-            <div class="absolute inset-0 overflow-hidden">
-              <div
-                class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full"
-              >
-                <div class="pointer-events-auto relative w-screen max-w-md">
-                  <div
-                    class="absolute top-0 right-4 flex pt-4 pr-2 sm:pr-4 z-10"
-                  >
-                    <button
-                      id="close"
-                      type="button"
-                      class="bg-slate-800 hover:bg-slate-500 rounded-md border border-orange-400 text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
-                    >
-                      <span class="sr-only text-lg">Close panel</span>
-                      <svg
-                        class="h-10 w-10"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M6 18L18 6M6 6l12 12"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-
-                  <div
-                    class="flex h-full flex-col overflow-y-scroll bg-color-nav py-6 shadow-xl"
-                  >
-                    <div class="px-4 sm:px-6">
-                      <h2
-                        class="text-2xl font-medium text-gray-300"
-                        id="slide-over-title"
-                      >
-                        Login
-                      </h2>
-                    </div>
-                    <div class="relative mt-6 flex-1 px-4 sm:px-6">
-                      <div class="flex-shrink w-64 m-auto">
-                        <div
-                          class="absolute inset-0 px-4 sm:px-6 text-gray-300"
-                        >
-                          <div
-                            class="h-auto border-2 border-dashed border-gray-200 p-2"
-                            aria-hidden="true"
-                          >
-                            <!-- Form -->
-                            <form class="" id="login-form" action="">
-                              <div class="flex flex-col gap-2 items-center">
-                                <div id="login-message" class=""></div>
-                                <div class="flex-1 w-5/6 items-center">
-                                  <input
-                                    id="login-name"
-                                    type="name"
-                                    class="focus:outline-none w-full"
-                                    placeholder="Username"
-                                  />
-                                </div>
-                                <div class="flex-1 w-5/6">
-                                  <input
-                                    id="login-pwd"
-                                    type="password"
-                                    class="focus:outline-none w-full"
-                                    placeholder="Password"
-                                  />
-                                </div>
-                                <button
-                                  type="submit"
-                                  class="btn-secondary mr-1 zero-font-acme mobile:text-xl tablet:text-2xl items-start"
-                                  id="login-btn"
-                                >
-                                  Log in
-                                </button>
-                              </div>
-                            </form>
-                            <!-- Form END-->
-                          </div>
-                        </div>
-                      </div>
-                      <!-- /End replace -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End of login in modal -->
-
       <!-- Sign up modal -->
-      <div class="relative z-10 hidden transition-all" id="signupModal">
+      <div class="relative z-10 hidden transition-all" id="editProfileModal">
         <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity">
           <div class="fixed inset-0 overflow-hidden">
             <div class="absolute inset-0 overflow-hidden">
               <div
-                class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full"
+                class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10"
               >
                 <div class="pointer-events-auto relative w-screen max-w-md">
                   <div
                     class="absolute top-0 right-4 flex pt-4 pr-2 sm:pr-4 z-10"
                   >
                     <button
-                      id="signup-close"
+                      id="closeEditModal"
                       type="button"
                       class="bg-slate-800 hover:bg-slate-500 rounded-md border border-orange-400 text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
                     >
                       <span class="sr-only text-lg">Close panel</span>
-
+                      <!-- Heroicon name: outline/x-mark -->
                       <svg
                         class="h-10 w-10"
                         xmlns="http://www.w3.org/2000/svg"
@@ -350,10 +261,10 @@
                   >
                     <div class="px-4 sm:px-6">
                       <h2
-                        class="text-2xl font-medium text-gray-300"
+                        class="text-lg font-medium text-gray-300"
                         id="slide-over-title"
                       >
-                        Sign up
+                        Edit profile
                       </h2>
                     </div>
                     <div class="relative mt-6 flex-1 px-4 sm:px-6">
@@ -366,41 +277,46 @@
                             aria-hidden="true"
                           >
                             <!-- Form -->
-                            <form id="register-form" action="">
+                            <form id="editProfile" action="">
                               <div class="flex flex-col gap-2 items-center">
                                 <div id="register-message" class=""></div>
                                 <div class="flex-1 w-5/6 items-center">
-                                  <label for="name">Enter your name:</label>
+                                  <label for="name"
+                                    >Your registered name:</label
+                                  >
                                   <input
                                     id="register-name"
                                     type="name"
+                                    name="name"
                                     class="focus:outline-none w-full"
                                     placeholder="Your name"
+                                    disabled
                                   />
                                 </div>
                                 <div class="flex-1 w-5/6">
-                                  <label for="email">Enter your email:</label>
+                                  <label for="email"
+                                    >Your registered email:</label
+                                  >
                                   <input
                                     id="register-email"
                                     type="email"
+                                    name="email"
                                     class="focus:outline-none w-full"
                                     placeholder="Your email"
-                                    pattern="^[\w\-.]+@(stud.)?noroff.no$"
-                                    title="Only able to use @(stud)noroff.no register email"
+                                    disabled
                                   />
                                 </div>
                                 <div class="flex-1 w-5/6">
-                                  <label for="url"
-                                    >Enter your profile image URL:</label
-                                  >
+                                  <label for="url">Your registered URL:</label>
                                   <input
                                     id="register-avatar"
                                     type="url"
+                                    name="avatar"
                                     class="focus:outline-none w-full"
                                     placeholder="Profile picture"
                                   />
                                 </div>
-                                <div class="flex-1 w-5/6">
+                                <div class="flex-1 w-5/6 hidden">
                                   <label for="password"
                                     >Register a password:</label
                                   >
@@ -415,7 +331,7 @@
                                   class="btn-secondary mr-1 zero-font-acme mobile:text-xl tablet:text-2xl items-start"
                                   id="register"
                                 >
-                                  Register
+                                  Change
                                 </button>
                               </div>
                             </form>
@@ -433,31 +349,85 @@
         </div>
       </div>
       <!-- End of login & sign in modal -->
-      <!-- Section with the latest news -->
-      <section class="md:w-5/6 lg:w-4/6 m-0 p-0">
-        <div class="py-4"><h2 class="text-2xl">Latest news</h2></div>
-        <div class="flex flex-col gap-2">
-          <div
-            class="bg-slate-700/90 border border-sky-600 w-full rounded-t-lg p-2"
-          >
-            <h3 class="text-xl">Find your next game</h3>
+
+      <!-- Section with the profile information -->
+      <section class="w-full md:w-5/6 lg:w-4/6 m-0 p-0">
+        <div class="flex flex-row py-4">
+          <div class="flex-shrink w-36">
+            <h2 class="text-2xl">Profile</h2>
           </div>
-          <div
-            class="bg-slate-700/90 border border-sky-600 w-full rounded-b-lg p-2"
-          >
-            <div>
-              <p>
-                Come and follow ZERO BUD, we are your new action house where you
-                will find loads of games, hardware and software. We also have
-                in-game coins for all the big games and services. The latest
-                news in our concept is that we have a collaboration with several
-                other action houses and you can find everything from houses,
-                cars, lawnmowers and much more.
-              </p>
-              <p>Register today and become one of ZERO BUD</p>
+        </div>
+        <div
+          id="profile"
+          class="bg-slate-600 outline outline-1 outline-slate-500 rounded-sm shadow-lg shadow-slate-400/30 p-1 min-h-64 max-h-min flex flex-col md:flex-row gap-2"
+        >
+          <!-- Profile card -->
+          <div class="flex-shrink w-64">
+            <div
+              id="profileImage"
+              class="bg-slate-700 outline outline-1 outline-slate-500 rounded-md h-48"
+            ></div>
+            <div class="pt-2 zero-font-acme text-xl xl:text-2xl text-center">
+              <button class="btn-secondary" id="openEditModal">
+                <span class="material-symbols-outlined text-lg"> edit </span
+                >Edit profile
+              </button>
             </div>
+          </div>
+          <div id="profile-info" class="flex-1 zero-font-niramit text-xl">
+            <!-- Insert of profile information-->
+          </div>
+          <div class="flex-grow-0 zero-font-acme text-xl xl:text-2xl">
             <div class="p-1"></div>
           </div>
+          <!-- Profile card END -->
+        </div>
+      </section>
+      <!-- Section with information about the site -->
+      <!-- Section for new listing -->
+      <section class="w-full md:w-5/6 lg:w-4/6 m-0 p-0">
+        <div class="flex flex-col sm:flex-row py-4">
+          <div id="newList-form" class="hidden">
+            <div class="flex-shrink w-32 text-center self-center">
+              <h2 class="text-xl uppercase">New list</h2>
+            </div>
+            <div
+              class="flex w-full justify-center sm:justify-end zero-font-acme text-xl xl:text-2xl"
+            >
+              <button class="btn-primary" id="">
+                <span class="material-symbols-outlined text-lg text-black">
+                  add_box </span
+                >close
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section with the active listings -->
+      <section class="w-full md:w-5/6 lg:w-4/6 m-0 p-0">
+        <div class="flex flex-col sm:flex-row py-4">
+          <div class="flex-shrink w-40 text-center self-center">
+            <h2 class="text-xl uppercase">All listings</h2>
+          </div>
+          <div
+            class="flex w-full justify-center sm:justify-end zero-font-acme text-xl xl:text-2xl"
+          >
+            <a
+              href="/pages/listings/new/index.html"
+              class="btn-primary"
+              id="newList"
+            >
+              <span class="material-symbols-outlined text-lg text-black">
+                add_box </span
+              >new listings
+            </a>
+          </div>
+        </div>
+        <div
+          id="active-list"
+          class="grid grid-cols-1 mobile:grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-10 justify-items-center m-1 p-1"
+        >
+          <!-- Product cards inserted -->
         </div>
       </section>
       <!-- Section with information about the site -->

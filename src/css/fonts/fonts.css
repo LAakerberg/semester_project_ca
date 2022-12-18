@@ -1,0 +1,70 @@
+/* components/fonts/fonts.css */
+
+@layer base {
+  @font-face {
+    font-family: Acme;
+    font-weight: 500;
+    src: url(/assets/fonts/Acme-Regular.ttf) format('ttf');
+  }
+  @font-face {
+    font-family: Ubuntu;
+    font-weight: 500;
+    src: url(/assets/fonts/Ubuntu-Regular.ttf) format('ttf');
+  }
+  @font-face {
+    font-family: Niramit;
+    font-weight: 500;
+    src: url(/assets/fonts/Niramit-Regular.ttf) format('ttf');
+  }
+}
+
+@layer base {
+  .zero-font-style-1 {
+    font-family: Acme;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+  }
+}
+
+@layer base {
+  .zero-font-style-10 {
+    font-family: Acme;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+}
+
+@layer base {
+  .zero-font-style-2 {
+    font-family: Ubuntu;
+    text-transform: uppercase;
+  }
+}
+
+@layer base {
+  .zero-font-style-3 {
+    font-family: Niramit;
+    font-size: 0.9rem;
+  }
+}
+
+@layer base {
+  .zero-font-acme {
+    font-family: Acme;
+    font-size: 1rem;
+  }
+}
+
+@layer base {
+  .zero-font-ubuntu {
+    font-family: Ubuntu;
+    font-size: 0.9rem;
+  }
+}
+
+@layer base {
+  .zero-font-niramit {
+    font-family: Niramit;
+    font-size: 1rem;
+  }
+}

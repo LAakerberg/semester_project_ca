@@ -1,0 +1,195 @@
+/* components/buttons.css */
+
+.btn-secondary {
+  background-color: #21374d;
+  color: #de910b;
+  border: 1px solid #de910b;
+  border-radius: 5px;
+  padding: 2px 10px 2px 10px;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.btn-secondary:hover {
+  background-color: #de910b;
+  color: #21374d;
+  transition: 0.5s;
+}
+
+.btn-primary {
+  background-color: #de910b;
+  color: #21374d;
+  border: 1px solid #21374d;
+  border-radius: 5px;
+  padding: 2px 10px 2px 10px;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.btn-primary:hover {
+  background-color: #21374d;
+  color: #de910b;
+  border: 1px solid #de910b;
+  transition: 0.5s;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+a:hover {
+  text-shadow: 0 0 20px #de600b;
+  transition: 0.5s;
+}
+
+@layer components {
+  .range-number {
+    background-color: #21374d;
+    outline: 1px solid #de910b;
+    outline-offset: 0px;
+    border-radius: 10px;
+    width: 64px;
+    box-sizing: border-box;
+    padding: 2px 6px;
+    transition: 0.5s;
+    font-size: 0.8rem;
+  }
+}
+
+select {
+  background-color: #21374d;
+  border: 1px solid #de910b;
+  border-radius: 10px;
+  padding: 6px;
+  width: 180px;
+  transition: 1s;
+  font-size: 1rem;
+}
+
+select:focus-visible {
+  border: 3px solid #de910b;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+input[type='date'] {
+  background-color: #21374d;
+  border: 1px solid #de910b;
+  border-radius: 10px;
+  padding: 6px;
+  width: 180px;
+  height: 45px;
+  transition: 1s;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+input[type='date']:focus-visible {
+  border: 3px solid #de910b;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+input[type='search'] {
+  background-color: #21374d;
+  border: 3px solid #de910b;
+  border-radius: 10px;
+  padding: 10px;
+  transition: 1s;
+  font-size: 1rem;
+}
+
+input[type='search']:focus-visible {
+  border: 5px solid #de910b;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+input[type='name'],
+[type='email'],
+[type='url'],
+[type='datetime-local'] {
+  background-color: #21374d;
+  border: 1px solid #de910b;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 6px;
+  font-size: 1rem;
+}
+
+input[type='name']:focus-visible,
+[type='email']:focus-visible,
+[type='url']:focus-visible {
+  border: 3px solid #de910b;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+textarea {
+  background-color: #21374d;
+  border: 1px solid #de910b;
+  border-radius: 10px;
+  width: 100%;
+  min-height: 80%;
+  height: 100px;
+  box-sizing: border-box;
+  padding: 6px;
+  font-size: 1rem;
+}
+
+textarea:focus-visible {
+  border: 3px solid #de910b;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+input[type='password'] {
+  background-color: #21374d;
+  border: 1px solid #de910b;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 6px;
+  transition: 1s;
+  font-size: 1rem;
+}
+
+input[type='password']:focus-visible {
+  border: 3px solid #de910b;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+input[type='number'] {
+  background-color: #21374d;
+  outline: 1px solid #de910b;
+  outline-offset: 0px;
+  border-radius: 10px;
+  width: 100px;
+  box-sizing: border-box;
+  padding: 6px;
+  transition: 0.5s;
+  font-size: 1rem;
+}
+
+input[type='number']:focus-visible {
+  outline: 3px solid #de910b;
+  outline-offset: 0px;
+  transition: 0.5s;
+}
+
+input:disabled {
+  border: 1px solid rgb(139, 3, 3);
+  color: rgb(165, 165, 165);
+}
+
+nav a {
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  transition: 0.4s;
+  text-shadow: 0 0 20px #de600b;
+}

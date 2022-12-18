@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="/src/js/api/listings/index.js" type="module" defer></script>
-    <meta
-      name="description"
-      content="Zero Bud - Your auction house for all games"
-    />
+    <script
+      src="/src/js/api/listings/specific/index.js"
+      type="module"
+      defer
+    ></script>
+
     <meta
       name="description"
       content="Zero Bud - Your auction house for all games"
@@ -16,14 +17,14 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     />
-    <link href="../src/css/style.css" rel="stylesheet" />
+    <link href="/src/css/style.css" rel="stylesheet" />
     <title>Zero Bud | Find your games</title>
   </head>
 
   <body class="zero-text-color">
     <!-- Header -->
-    <header class="h-96 max-h-96 zero-font-niramit">
-      <div class="header-img static h-96 max-h-96">
+    <header class="h-64 max-h-96 zero-font-niramit">
+      <div class="header-img static h-64 max-h-96">
         <div
           class="flex flex-row bg-color-nav h-16 max-h-16 w-full place-content-center fixed top-0 z-10"
         >
@@ -56,23 +57,25 @@
           </nav>
           <!-- Navigation section END -->
         </div>
-      </div>
-      <!-- Header with information text -->
-      <div class="absolute top-40 xl:top-20 left-10">
-        <h1 class="zero-font-ubuntu text-4xl uppercase">Welcome to ZERO-BUD</h1>
-        <span class="zero-font-ubunt text-lg pl-8 uppercase"
-          >For gamers By gamers...</span
+        <!-- Header with information text -->
+        <div class="absolute top-40 xl:top-20 left-10">
+          <h1 class="zero-font-ubuntu text-2xl sm:text-4xl uppercase">
+            Welcome to ZERO-BUD
+          </h1>
+          <span class="zero-font-ubunt text-lg pl-8 uppercase"
+            >For gamers By gamers...</span
+          >
+        </div>
+        <div
+          class="bg-slate-700/90 border border-sky-600 sm:w-fit top-52 m-1 md:w-96 rounded-lg absolute md:top-44 md:right-2 lg:right-16 p-4 hidden"
         >
-      </div>
-      <div
-        class="bg-slate-700/90 border border-sky-600 sm:w-fit top-52 m-1 md:w-96 rounded-lg absolute md:top-44 md:right-2 lg:right-16 p-4 hidden"
-      >
-        <h1 class="zero-font-ubuntu text-3xl">Find your next game</h1>
-        <span class="zero-font-ubunt text-sm"
-          >Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s.</span
-        >
+          <h1 class="zero-font-ubuntu text-3xl">Find your next game</h1>
+          <span class="zero-font-ubunt text-sm"
+            >Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s.</span
+          >
+        </div>
       </div>
     </header>
     <!-- End of header -->
@@ -173,7 +176,9 @@
                                   class="zero-font-acme text-xl tablet:text-2xl uppercase flex flex-col divide-y divide-dashed"
                                 >
                                   <li class="p-3">
-                                    <a href="./index.html" class="">Home</a>
+                                    <a href="/pages/index.html" class=""
+                                      >Home</a
+                                    >
                                   </li>
                                   <li class="p-3">
                                     <a
@@ -217,41 +222,99 @@
       </div>
 
       <!-- NAV MODAL END -->
-      <!-- Section with the latest news -->
-      <section class="md:w-5/6 lg:w-4/6 m-0 p-0">
+      <!-- Section with the profile information -->
+      <section class="w-full sm:w-5/6 lg:w-4/5 m-0 p-0">
         <div class="flex flex-row py-4">
           <div class="flex-shrink w-36">
-            <h2 class="text-2xl">All listings</h2>
-          </div>
-          <div class="flex-1">
-            Sort by categori:
-            <select>
-              <option value="Games">Games</option>
-              <option value="Hardware">Hardware</option>
-              <option value="Software">Software</option>
-              <option value="Coins">Coins</option>
-            </select>
-          </div>
-          <div class="flex-1">
-            Sort by date:
-            <input
-              type="date"
-              name=""
-              class="focus:outline-none"
-              id=""
-              value=""
-            />
+            <h2 class="text-2xl">Product</h2>
           </div>
         </div>
-        <div id="register-message" class="text-center"></div>
         <div
-          id="auction-list"
-          class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 justify-items-center m-1 p-1"
+          id="profile"
+          class="bg-slate-600 outline outline-1 outline-slate-500 rounded-sm shadow-lg shadow-slate-400/30 p-1 h-auto flex flex-col lg:flex-row gap-2"
         >
-          <!-- Product cards inserted -->
+          <!-- Profile card -->
+          <div class="flex-1 w-64 mobile:w-4/5 mx-auto my-0">
+            <div
+              id="list-images"
+              class="bg-slate-700 outline outline-1 outline-slate-500 rounded-md items-center"
+            ></div>
+            <!-- innerHTML (Media/Images) -->
+            <div
+              id="list-gallery"
+              class="grid grid-cols-3 gap-4 py-2 justify-items-center"
+            >
+              <!-- innerHTML (Media/Images from gallery) -->
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col justify-between">
+            <div
+              id="list-title"
+              class="text-xl underline underline-offset-4 pb-1"
+            >
+              <!-- innerHTML (Title) -->
+            </div>
+            <div id="list-description" class="flex-1">
+              <!-- innerHTML (Description) -->
+            </div>
+            <div id="list-tags" class="order-last italic py-2">
+              <!-- innerHTML (Tags) -->
+            </div>
+          </div>
+          <div class="flex-none w-64">
+            <div id="register-message"></div>
+            <form id="bid-form" action="">
+              <div>Add a bid</div>
+              <div>
+                <input
+                  id="sliderBid"
+                  name="amount"
+                  type="range"
+                  min="1"
+                  max="1000"
+                  value="500"
+                />
+                <div class="flex flex-row gap-2">
+                  <div
+                    id="sliderBidValue"
+                    class="range-number zero-font-acme mobile:text-xl tablet:text-2xl"
+                  ></div>
+                  <div>
+                    <button
+                      id="register-bid"
+                      class="btn-primary zero-font-acme mobile:text-xl tablet:text-2xl"
+                      value="Send"
+                      type="submit"
+                    >
+                      Bid
+                    </button>
+                  </div>
+                </div>
+                <div id="highest-bid" class="pt-2"></div>
+              </div>
+            </form>
+          </div>
+          <!-- Profile card END -->
         </div>
       </section>
       <!-- Section with information about the site -->
+      <!-- Section with the active listings -->
+      <section class="w-full md:w-5/6 lg:w-4/6 m-0 p-0">
+        <div class="flex flex-row py-4">
+          <div class="flex-shrink w-36">
+            <h2 class="text-xl">Bids history</h2>
+          </div>
+        </div>
+        <div
+          class="grid grid-rows gap-4 py-4 justify-items-start max-w-min px-5"
+        >
+          <div
+            id="list-bids"
+            class="flex flex-col min-w-max gap-3 p-2 bg-slate-600 outline outline-1 hover:outline-2 outline-slate-500 rounded-sm w-auto shadow-lg hover:shadow-slate-400/50"
+          ></div>
+          <!-- All bids inserted -->
+        </div>
+      </section>
     </main>
     <!-- End of Main body-->
     <!-- Footer in the bottom-->
