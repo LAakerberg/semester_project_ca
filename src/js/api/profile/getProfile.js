@@ -19,6 +19,20 @@ activeListings.innerHTML = ``;
 const profileIdentify = localStorage.getItem('myName');
 const profileEmail = localStorage.getItem('myEmail');
 
+const menuOpenModal = document.querySelector('#hamburgMenu');
+const openMenuBtn = document.querySelector('#openMenu');
+const closeMenuBtn = document.querySelector('#closeMenu');
+
+export function openMenu() {
+  openMenuBtn.onclick = function () {
+    menuOpenModal.style.display = 'block';
+  };
+
+  closeMenuBtn.onclick = function () {
+    menuOpenModal.style.display = 'none';
+  };
+}
+
 export function requestProfile() {
   async function getProfile(url) {
     try {

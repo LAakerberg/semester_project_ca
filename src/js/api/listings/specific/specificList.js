@@ -89,7 +89,6 @@ export function specificList() {
       // Show all active bids on the product
 
       for (let i = 0; i < specificResults.bids.length; i++) {
-        console.log(specificResults);
         const dateRequested = new Date(`${specificResults.bids[i].created}`);
         const dateEndRequested = new Date(`${specificResults.endsAt}`);
         // Formats the date from the request to be more user friendly and readable
@@ -108,8 +107,6 @@ export function specificList() {
           'en-GB',
           dateFormatted
         );
-
-        console.log(deadline);
 
         const specBids = specificResults.bids;
         //const deadline = specificResults.endsAt;
