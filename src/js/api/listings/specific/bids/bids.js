@@ -52,8 +52,10 @@ export function newBid() {
           );
           //redirect(response);
         } else {
-          const errorLog = json.errors[0].message;
-          registerMessage.innerHTML = errorMessage(`Error!! ${errorLog}`);
+          const errorLog = json.errors[0].code;
+          registerMessage.innerHTML = errorMessage(
+            `Error, you are not logged in! ${errorLog}`
+          );
         }
       } catch (error) {
         console.log(error);

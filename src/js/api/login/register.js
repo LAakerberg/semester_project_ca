@@ -61,22 +61,19 @@ export function registerUser() {
         };
         const response = await fetch(API_HOST_REGISTER, registerTheUser);
         const json = await response.json();
-        const errorLog = json.errors[0].message;
+        console.log(response);
+        console.log(json);
 
-        if (response.ok === true) {
+        if (json.name === registerName.value || response.ok === true) {
           registerMessage.innerHTML = successMessage(
-            'Registration was successful, you will be redirected'
+            'Registration was successful, go to login page for sign in!'
           );
           //redirect(response);
         } else {
-          registerMessage.innerHTML = errorMessage('Not able to register user');
+          registerMessage.innerHTML = errorMessage(`Not able to register user`);
         }
-
-        registerMessage.innerHTML = errorMessage(
-          `Not able to register user! [${errorLog}]`
-        );
       } catch (error) {
-        console.log('Error to login');
+        console.log(error);
       }
     }
 

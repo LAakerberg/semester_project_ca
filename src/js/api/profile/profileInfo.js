@@ -60,8 +60,8 @@ export function getProfileInfo() {
           `Not able to collect the information! Try to log out & in again! <p>Error: ${profileInfo.errors[0].code}</p>`
         );
         profileData.innerHTML += `
-          <button class="btn-secondary mr-1" id="loginBtn">Log in</button>
-          <button class="btn-primary mr-1" id="registerBtn">Sign UP</button> 
+          <button class="btn-secondary mr-1" id="loginBtn"><a href="/index.html">Log in</a></button>
+          <button class="btn-primary mr-1" id="registerBtn"><a href="/index.html">Sign UP</a></button> 
           `;
       }
 

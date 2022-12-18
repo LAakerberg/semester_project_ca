@@ -16,6 +16,13 @@ import { registerUser } from './api/login/register.js';
 
 registerUser();
 
-/* When visit the homepage "First index.html", clear the localStorage.
-This will push the user to login again.  */
-//localStorage.clear();
+import { openMenu } from './api/listings/getListings.js';
+
+openMenu();
+
+import { searchButton } from './api/profile/profileInfo.js';
+
+searchButton();
+
+import { getProfileInfo } from './api/profile/profileInfo.js';
+getProfileInfo();
