@@ -8,6 +8,10 @@
       name="description"
       content="Zero Bud - Your auction house for all games"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
     <link href="/src/css/style.css" rel="stylesheet" />
     <title>Zero Bud | Find your games</title>
   </head>
@@ -17,61 +21,22 @@
     <header class="h-96 max-h-96 zero-font-niramit">
       <div class="header-img static h-96 max-h-96">
         <div
-          class="flex flex-row bg-color-nav opacity-95 h-16 max-h-16 absolute w-full place-content-center"
+          class="flex flex-col mobile:flex-row bg-color-nav opacity-95 h-16 max-h-16 absolute w-full place-content-center"
         >
-          <div class="flex-shrink w-36 m-auto text-center">
+          <div class="flex-shrink m-auto text-center">
             <p class="zero-font-acme text-lg mobile:text-xl tablet:text-2xl">
               ZERO BUD
             </p>
           </div>
-          <div class="flex-shrink m-auto inline-flex hidden">
-            <ul class="zero-font-style-1 inline-flex">
-              <li class="px-1">Home</li>
-              <li class="px-1">Products</li>
-              <li class="px-1">About</li>
-              <li class="px-1">Contact</li>
-            </ul>
-            <div class="flex-shrink w-64 m-auto">
-              <input
-                type="search"
-                class="focus:outline-none"
-                placeholder="Search for you next game..."
-              />
-            </div>
-          </div>
-          <div
-            class="flex-shrink w-52 m-auto zero-font-acme mobile:text-xl tablet:text-2xl"
-          >
+          <div class="flex-shrink w-auto m-auto zero-font-acme text-2xl">
+            <button class="btn-secondary" id="openMenu">
+              <span class="material-symbols-outlined text-base mobile:text-xl">
+                menu
+              </span>
+            </button>
             <button class="btn-secondary mr-1" id="loginBtn">Log in</button>
-            <button class="btn-primary ml-1" id="registerBtn">Sign UP</button>
+            <button class="btn-primary mr-1" id="registerBtn">Sign UP</button>
           </div>
-          <!-- Navigation section-->
-          <nav
-            class="h-16 zero-text-color w-4/5 m-auto p-0 text-center flex place-content-center hidden"
-          >
-            <div class="flex-shrink w-36 m-auto">
-              <p>ZERO BUD</p>
-            </div>
-            <div class="flex-shrink w-64 m-auto">
-              <input
-                type="search"
-                class="focus:outline-none"
-                placeholder="Search for you next game..."
-              />
-            </div>
-            <div class="flex-shrink m-auto">
-              <ul class="">
-                <li class="px-1">Home</li>
-                <li class="px-1">Products</li>
-                <li class="px-1">About</li>
-                <li class="px-1">Contact</li>
-              </ul>
-            </div>
-            <div class="flex-shrink w-52 m-auto zero-font-acme text-lg">
-              <button class="btn-secondary mr-1" id="loginBtn">Log in</button>
-              <button class="btn-primary ml-1" id="registerBtn">Sign UP</button>
-            </div>
-          </nav>
         </div>
         <!-- Header with information text -->
         <div class="absolute top-20 left-5">
@@ -93,10 +58,9 @@
             Find your next game
           </h1>
           <span class="zero-font-ubunt text-base"
-            >Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s.</span
-          >
+            >Find your next gaming product. We have everything from in-game
+            coins to hardware and software products. Come and join us now!
+          </span>
         </div>
       </div>
     </header>
@@ -104,6 +68,146 @@
     <!-- Main body-->
 
     <main class="flex flex-col p-3 items-center zero-font-niramit">
+      <!-- NAV MODAL -->
+      <div class="relative z-10 hidden transition-all" id="hamburgMenu">
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity">
+          <div class="fixed inset-0 overflow-hidden">
+            <div class="absolute inset-0 overflow-hidden">
+              <div
+                class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full"
+              >
+                <div class="pointer-events-auto relative w-screen max-w-md">
+                  <div
+                    class="absolute top-0 right-4 flex pt-4 pr-2 sm:pr-4 z-10"
+                  >
+                    <button
+                      id="closeMenu"
+                      type="button"
+                      class="bg-slate-800 hover:bg-slate-500 rounded-md border border-orange-400 text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
+                    >
+                      <span class="sr-only text-lg">Close panel</span>
+                      <svg
+                        class="h-10 w-10"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M6 18L18 6M6 6l12 12"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+
+                  <div
+                    class="flex h-full flex-col overflow-y-scroll bg-color-nav py-6 shadow-xl"
+                  >
+                    <div class="px-4 sm:px-6">
+                      <h2
+                        class="text-lg font-medium text-gray-300"
+                        id="slide-over-title"
+                      >
+                        Menu
+                      </h2>
+                    </div>
+                    <div class="relative mt-6 flex-1 px-4 sm:px-6">
+                      <div class="flex-shrink w-64 m-auto">
+                        <div
+                          class="absolute inset-0 px-4 sm:px-6 text-gray-300"
+                        >
+                          <div>
+                            <div
+                              id="insert-profile-image"
+                              class="flex flex-col gap-2 zero-font-acme text-lg p-2"
+                            ></div>
+                            <div
+                              id="navIcon"
+                              class="flex-shrink w-40 m-auto zero-font-acme text-xl tablet:text-2xl p-2"
+                            >
+                              <a
+                                href="/pages/profile/index.html"
+                                id=""
+                                class=""
+                              >
+                                <span class="material-symbols-outlined">
+                                  account_circle
+                                </span></a
+                              >
+                              <button type="" class="" id="search-button">
+                                <span class="material-symbols-outlined">
+                                  search
+                                </span>
+                              </button>
+                              <a href="/index.html" id="logout">
+                                <span class="material-symbols-outlined">
+                                  logout
+                                </span>
+                              </a>
+                            </div>
+                            <div
+                              id="insert-profile"
+                              class="flex flex-col gap-2 zero-font-acme text-lg"
+                            ></div>
+                            <div class="flex flex-col gap-2 p-2">
+                              <div
+                                id="navMenu"
+                                class="bg-slate-600 border outline-2 border-slate-500 drop-shadow-lg shadow-black m-auto rounded-lg w-10/12 text-center"
+                              >
+                                <ul
+                                  class="zero-font-acme text-xl tablet:text-2xl uppercase flex flex-col divide-y divide-dashed"
+                                >
+                                  <li class="p-3">
+                                    <a href="/pages/index.html" class=""
+                                      >Home</a
+                                    >
+                                  </li>
+                                  <li class="p-3">
+                                    <a
+                                      href="/pages/listings/new/index.html"
+                                      class=""
+                                      >Sell</a
+                                    >
+                                  </li>
+                                  <li class="p-3">
+                                    <a href="" class="">Contact</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div
+                                class="flex flex-col gap-2 w-full text-center text-lg"
+                              >
+                                <div id="search-container" class="pt-5 hidden">
+                                  <label for="search"> </label>
+                                  <input
+                                    id="search-function"
+                                    name="search"
+                                    type="search"
+                                    class="focus:outline-none w-10/12"
+                                    placeholder="Search for you next game..."
+                                  />
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- /End replace -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NAV MODAL END -->
       <!-- Login modal -->
       <div class="relative z-10 hidden transition-all" id="loginModal">
         <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity">
@@ -212,27 +316,7 @@
               <div
                 class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full"
               >
-                <!--
-                  Slide-over panel, show/hide based on slide-over state.
-        
-                  Entering: "transform transition ease-in-out duration-500 sm:duration-700"
-                    From: "translate-x-full"
-                    To: "translate-x-0"
-                  Leaving: "transform transition ease-in-out duration-500 sm:duration-700"
-                    From: "translate-x-0"
-                    To: "translate-x-full"
-                -->
                 <div class="pointer-events-auto relative w-screen max-w-md">
-                  <!--
-                    Close button, show/hide based on slide-over state.
-        
-                    Entering: "ease-in-out duration-500"
-                      From: "opacity-0"
-                      To: "opacity-100"
-                    Leaving: "ease-in-out duration-500"
-                      From: "opacity-100"
-                      To: "opacity-0"
-                  -->
                   <div
                     class="absolute top-0 right-4 flex pt-4 pr-2 sm:pr-4 z-10"
                   >
@@ -242,7 +326,7 @@
                       class="bg-slate-800 hover:bg-slate-500 rounded-md border border-orange-400 text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
                     >
                       <span class="sr-only text-lg">Close panel</span>
-                      <!-- Heroicon name: outline/x-mark -->
+
                       <svg
                         class="h-10 w-10"
                         xmlns="http://www.w3.org/2000/svg"
@@ -301,6 +385,8 @@
                                     type="email"
                                     class="focus:outline-none w-full"
                                     placeholder="Your email"
+                                    pattern="^[\w\-.]+@(stud.)?noroff.no$"
+                                    title="Only able to use @(stud)noroff.no register email"
                                   />
                                 </div>
                                 <div class="flex-1 w-5/6">
@@ -361,106 +447,27 @@
           >
             <div>
               <p>
-                Main Content. Lorem Ipsum is simply dummy text of the printing
-                and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown
-                printer took a galley of type and scrambled it to make a type
-                specimen book. It has survived not only five centuries, but also
-                the leap into electronic typesetting
+                Come and follow ZERO BUD, we are your new action house where you
+                will find loads of games, hardware and software. We also have
+                in-game coins for all the big games and services. The latest
+                news in our concept is that we have a collaboration with several
+                other action houses and you can find everything from houses,
+                cars, lawnmowers and much more.
               </p>
-
-              <p>
-                Main Content. Lorem Ipsum is simply dummy text of the printing
-                and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown
-                printer took a galley of type and scrambled it to make a type
-                specimen book. It has survived not only five centuries, but also
-                the leap into electronic typesetting
-              </p>
+              <p>Register today and become one of ZERO BUD</p>
             </div>
-            <div class="p-1">Tags</div>
+            <div class="p-1"></div>
           </div>
         </div>
       </section>
       <!-- Section with information about the site -->
-      <!-- Section with the latest news -->
-      <section class="md:w-5/6 lg:w-4/6 m-0 p-0">
-        <div class="py-4"></div>
-        <div class="flex flex-col gap-2">
-          <div
-            class="bg-slate-700/90 border border-sky-600 w-full rounded-t-lg p-2"
-          >
-            <h3 class="text-xl">Find your next game</h3>
-          </div>
-          <div
-            class="bg-slate-700/90 border border-sky-600 w-full rounded-b-lg p-2"
-          >
-            <div>
-              <p>
-                Main Content. Lorem Ipsum is simply dummy text of the printing
-                and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown
-                printer took a galley of type and scrambled it to make a type
-                specimen book. It has survived not only five centuries, but also
-                the leap into electronic typesetting
-              </p>
-
-              <p>
-                Main Content. Lorem Ipsum is simply dummy text of the printing
-                and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown
-                printer took a galley of type and scrambled it to make a type
-                specimen book. It has survived not only five centuries, but also
-                the leap into electronic typesetting
-              </p>
-            </div>
-            <div class="p-1">Tags</div>
-          </div>
-        </div>
-      </section>
-      <!-- Section with information about the site -->
-      <!-- Section with the latest news -->
-      <section class="md:w-5/6 lg:w-4/6 m-0 p-0">
-        <div class="py-4"></div>
-        <div class="flex flex-col gap-2">
-          <div
-            class="bg-slate-700/90 border border-sky-600 w-full rounded-t-lg p-2"
-          >
-            <h3 class="text-xl">Find your next game</h3>
-          </div>
-          <div
-            class="bg-slate-700/90 border border-sky-600 w-full rounded-b-lg p-2"
-          >
-            <div>
-              <p>
-                Main Content. Lorem Ipsum is simply dummy text of the printing
-                and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown
-                printer took a galley of type and scrambled it to make a type
-                specimen book. It has survived not only five centuries, but also
-                the leap into electronic typesetting
-              </p>
-
-              <p>
-                Main Content. Lorem Ipsum is simply dummy text of the printing
-                and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown
-                printer took a galley of type and scrambled it to make a type
-                specimen book. It has survived not only five centuries, but also
-                the leap into electronic typesetting
-              </p>
-            </div>
-            <div class="p-1">Tags</div>
-          </div>
-        </div>
-      </section>
-      <!-- Section with information about the site -->
-      <section class="md:w-5/6 lg:w-4/6">s</section>
     </main>
     <!-- End of Main body-->
     <!-- Footer in the bottom-->
     <footer class="bg-slate-700/90 h-16 text-center content-center">
-      <div class="m-auto items-center content-center">My footers</div>
+      <div class="m-auto items-center content-center">
+        <p class="m-auto p-5 zero-font-acme">ZERO BUD ⓒ 2022</p>
+      </div>
     </footer>
   </body>
 </html>
