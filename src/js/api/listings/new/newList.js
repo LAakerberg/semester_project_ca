@@ -13,6 +13,7 @@ import { API_HOST_LISTINGS } from '../../auth/apiBase.js';
 import { authFetch } from '../../auth/authFetch.js';
 import { headers } from '../../auth/authFetch.js';
 import { errorMessage, successMessage } from '../../../components/message.js';
+import { redirectNewList } from '../../../components/function.js';
 
 export function newPostList() {
   newListForm.addEventListener('submit', (e) => {
@@ -20,8 +21,8 @@ export function newPostList() {
 
     const newListValue = {
       title: newTitle.value,
-      tag: newTag.value,
-      url: newUrl.value,
+      tag: [newTag.value],
+      media: [newUrl.value],
       endsAt: newDateTime.value,
       description: newDescription.value,
     };
@@ -46,11 +47,13 @@ export function newPostList() {
 
         if (response.ok === true) {
           registerMessage.innerHTML = successMessage(
-            'Registration was successful, you will be redirected'
+            'New list was successful created, you will be redirected!'
           );
+          redirectNewList(response);
           //redirect(response);
         } else {
-          registerMessage.innerHTML = errorMessage('Not able to register user');
+          const errorLog = json.errors[0].message;
+          registerMessage.innerHTML = errorMessage(`Error!! ${errorLog}`);
         }
       } catch (error) {
         console.log(error);
