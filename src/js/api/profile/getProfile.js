@@ -86,7 +86,7 @@ export function requestProfile() {
               class="img-style rounded-t-lg p-1"
             />
           </div>
-          <div class="p-1">${profileInfo.listings[i].title.slice(0, 25)}</div>
+          <div class="p-1">${profileInfo.listings[i].title.slice(0, 22)}</div>
           <div class="p-1">Ends: ${newFormat}</div>
         </div>
         </a>
