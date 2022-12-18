@@ -20,20 +20,6 @@
   }
 }
 
-@layer components {
-  .range-number {
-    background-color: #21374d;
-    outline: 1px solid #de910b;
-    outline-offset: 0px;
-    border-radius: 10px;
-    width: 50px;
-    box-sizing: border-box;
-    padding: 6px;
-    transition: 0.5s;
-    font-size: 0.8rem;
-  }
-}
-
 input[type='range'] {
   background-color: #475569;
 }
