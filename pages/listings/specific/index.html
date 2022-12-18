@@ -9,6 +9,11 @@
       type="module"
       defer
     ></script>
+    <script
+      src="/src/js/api/listings/specific/index.js"
+      type="module"
+      defer
+    ></script>
 
     <meta
       name="description"
@@ -77,8 +82,10 @@
                 <li class="px-2">
                   <a href="/pages/index.html" class="">Home</a>
                 </li>
-                <li class="px-2"><a href="" class="">Products</a></li>
-                <li class="px-2"><a href="" class="">About</a></li>
+                <li class="px-2">
+                  <a href="/pages/listings/new/index.html" class="">Sell</a>
+                </li>
+                <li class="px-2"><a href="" class="">Buy</a></li>
                 <li class="px-2"><a href="" class="">Contact</a></li>
               </ul>
             </div>
@@ -120,7 +127,7 @@
 
     <main class="flex flex-col p-3 items-center zero-font-niramit">
       <!-- Section with the profile information -->
-      <section class="w-full sm:w-5/6 lg:w-4/6 m-0 p-0">
+      <section class="w-full sm:w-5/6 lg:w-4/5 m-0 p-0">
         <div class="flex flex-row py-4">
           <div class="flex-shrink w-36">
             <h2 class="text-2xl">Product</h2>
@@ -128,10 +135,10 @@
         </div>
         <div
           id="profile"
-          class="bg-slate-600 outline outline-1 outline-slate-500 rounded-sm shadow-lg shadow-slate-400/30 p-1 h-auto flex flex-col md:flex-row gap-2"
+          class="bg-slate-600 outline outline-1 outline-slate-500 rounded-sm shadow-lg shadow-slate-400/30 p-1 h-auto flex flex-col lg:flex-row gap-2"
         >
           <!-- Profile card -->
-          <div class="flex-1 w-9/12 md:flex-none md:w-80 mx-auto my-0">
+          <div class="flex-1 w-64 mobile:w-4/5 mx-auto my-0">
             <div
               id="list-images"
               class="bg-slate-700 outline outline-1 outline-slate-500 rounded-md items-center"
@@ -158,24 +165,38 @@
               <!-- innerHTML (Tags) -->
             </div>
           </div>
-          <div class="flex-grow-0 w-40">
-            <div>Add a bid</div>
-            <div>
-              <input
-                id="sliderBid"
-                type="range"
-                min="1"
-                max="1000"
-                value="500"
-              />
-              <div class="flex flex-row gap-2">
-                <div id="sliderBidValue" class="range-number"></div>
-                <div>
-                  <button class="range-number" value="Send">Bid</button>
+          <div class="flex-none w-64">
+            <div id="register-message"></div>
+            <form id="bid-form" action="">
+              <div>Add a bid</div>
+              <div>
+                <input
+                  id="sliderBid"
+                  name="amount"
+                  type="range"
+                  min="1"
+                  max="1000"
+                  value="500"
+                />
+                <div class="flex flex-row gap-2">
+                  <div
+                    id="sliderBidValue"
+                    class="range-number zero-font-acme mobile:text-xl tablet:text-2xl"
+                  ></div>
+                  <div>
+                    <button
+                      id="register-bid"
+                      class="btn-primary zero-font-acme mobile:text-xl tablet:text-2xl"
+                      value="Send"
+                      type="submit"
+                    >
+                      Bid
+                    </button>
+                  </div>
                 </div>
+                <div id="highest-bid" class="pt-2"></div>
               </div>
-              <div>Highest bid: 550</div>
-            </div>
+            </form>
           </div>
           <!-- Profile card END -->
         </div>
@@ -185,13 +206,16 @@
       <section class="w-full md:w-5/6 lg:w-4/6 m-0 p-0">
         <div class="flex flex-row py-4">
           <div class="flex-shrink w-36">
-            <h2 class="text-xl">All bids</h2>
+            <h2 class="text-xl">Bids history</h2>
           </div>
         </div>
         <div
-          id="list-bids"
-          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 py-4 justify-items-center"
+          class="grid grid-rows gap-4 py-4 justify-items-start max-w-min px-5"
         >
+          <div
+            id="list-bids"
+            class="flex flex-col min-w-max gap-3 p-2 bg-slate-600 outline outline-1 hover:outline-2 outline-slate-500 rounded-sm w-auto shadow-lg hover:shadow-slate-400/50"
+          ></div>
           <!-- All bids inserted -->
         </div>
       </section>
