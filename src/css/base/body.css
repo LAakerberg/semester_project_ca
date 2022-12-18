@@ -55,19 +55,4 @@
   }
 }
 
-#hamburger-menu {
-  display: none;
-  padding-left: 10px;
-  transition: 0.2s ease-in-out;
-}
-
-#hamburger-menu:checked ~ nav {
-  display: block;
-  position: static;
-  background: linear-gradient(#ffffff, #bebebe);
-  padding: 10px;
-  height: 149px;
-  text-align: center;
-  margin: 0px auto;
-  border-radius: 10px;
-}
+/* Hamburger menu style */
