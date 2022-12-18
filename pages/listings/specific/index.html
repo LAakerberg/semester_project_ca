@@ -28,73 +28,34 @@
         <div
           class="flex flex-row bg-color-nav h-16 max-h-16 w-full place-content-center fixed top-0 z-10"
         >
-          <!-- <div class="flex-shrink w-36 m-auto text-center hidden">
-            <p class="zero-font-style-1">ZERO BUD</p>
-          </div>
-          <div class="flex-shrink m-auto inline-flex hidden">
-            <ul class="zero-font-style-1 inline-flex">
-              <li class="px-1">Home</li>
-              <li class="px-1">Products</li>
-              <li class="px-1">About</li>
-              <li class="px-1">Contact</li>
-            </ul>
-            <div class="flex-shrink w-64 m-auto hidden">
-              <input
-                type="search"
-                class="focus:outline-none"
-                placeholder="Search for you next game..."
-              />
-            </div>
-          </div>
-          <div class="flex-shrink w-52 m-auto zero-font-style-1 hidden">
-            <button class="btn-secondary mr-1" id="loginBtn">Log in</button>
-            <button class="btn-primary ml-1" id="registerBtn">Sign UP</button>
-          </div> -->
           <!-- Navigation section-->
           <nav
-            class="h-16 zero-text-color w-4/5 m-auto p-0 text-center flex place-content-center static"
+            class="h-16 zero-text-color w-full sm:w-4/5 m-auto p-0 text-center flex place-content-center static"
           >
+            <!-- Navigation Logo-->
             <div
               class="flex-shrink w-40 m-auto zero-font-acme mobile:text-xl tablet:text-2xl"
             >
-              <span>ZERO BUD</span>
-              <span class="material-symbols-outlined"> home </span>
-            </div>
-            <div class="flex-shrink w-64 m-auto">
-              <input
-                id="search-function"
-                type="search"
-                class="focus:outline-none"
-                placeholder="Search for you next game..."
-              />
-            </div>
-            <div
-              class="bg-slate-600 flex-shrink m-auto absolute top-20 p-2 rounded-lg"
-            >
-              <ul
-                class="zero-font-acme mobile:text-xl tablet:text-2xl uppercase"
-              >
-                <li class="px-2">
-                  <a href="/pages/index.html" class="">Home</a>
-                </li>
-                <li class="px-2">
-                  <a href="/pages/listings/new/index.html" class="">Sell</a>
-                </li>
-                <li class="px-2"><a href="" class="">Buy</a></li>
-                <li class="px-2"><a href="" class="">Contact</a></li>
-              </ul>
-            </div>
-            <div
-              class="flex-shrink w-52 m-auto zero-font-acme mobile:text-xl tablet:text-2xl"
-            >
-              <span class="material-symbols-outlined"> account_circle </span>
-              <a href="/index.html" id="logout">
-                <span class="material-symbols-outlined"> logout </span>
+              <a href="/pages/index.html">
+                <span>ZERO BUD</span>
+                <span class="material-symbols-outlined text-lg sm:text-3xl">
+                  home
+                </span>
               </a>
-              <!--               <button class="btn-secondary mr-1" id="loginBtn">Log in</button>
-              <button class="btn-primary ml-1" id="registerBtn">Sign UP</button> -->
             </div>
+            <!-- Navigation Logo END -->
+            <!-- Navigation menu -->
+            <div class="flex-shrink w-52 m-auto">
+              <div class="pt-2 zero-font-acme text-xl xl:text-2xl text-center">
+                <button class="btn-secondary" id="openMenu">
+                  <span class="material-symbols-outlined text-lg"> menu </span
+                  >Menu
+                </button>
+              </div>
+            </div>
+            <!-- Navigation menu END -->
           </nav>
+          <!-- Navigation section END -->
         </div>
         <!-- Header with information text -->
         <div class="absolute top-40 xl:top-20 left-10">
@@ -121,6 +82,144 @@
     <!-- Main body-->
 
     <main class="flex flex-col p-3 items-center zero-font-niramit">
+      <!-- NAV MODAL -->
+      <div class="relative z-10 hidden transition-all" id="hamburgMenu">
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity">
+          <div class="fixed inset-0 overflow-hidden">
+            <div class="absolute inset-0 overflow-hidden">
+              <div
+                class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full"
+              >
+                <div class="pointer-events-auto relative w-screen max-w-md">
+                  <div
+                    class="absolute top-0 right-4 flex pt-4 pr-2 sm:pr-4 z-10"
+                  >
+                    <button
+                      id="closeMenu"
+                      type="button"
+                      class="bg-slate-800 hover:bg-slate-500 rounded-md border border-orange-400 text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
+                    >
+                      <span class="sr-only text-lg">Close panel</span>
+                      <svg
+                        class="h-10 w-10"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M6 18L18 6M6 6l12 12"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+
+                  <div
+                    class="flex h-full flex-col overflow-y-scroll bg-color-nav py-6 shadow-xl"
+                  >
+                    <div class="px-4 sm:px-6">
+                      <h2
+                        class="text-lg font-medium text-gray-300"
+                        id="slide-over-title"
+                      >
+                        Menu
+                      </h2>
+                    </div>
+                    <div class="relative mt-6 flex-1 px-4 sm:px-6">
+                      <div class="flex-shrink w-64 m-auto">
+                        <div
+                          class="absolute inset-0 px-4 sm:px-6 text-gray-300"
+                        >
+                          <div>
+                            <div
+                              id="insert-profile-image"
+                              class="flex flex-col gap-2 zero-font-acme text-lg p-2"
+                            ></div>
+                            <div
+                              id="navIcon"
+                              class="flex-shrink w-40 m-auto zero-font-acme text-xl tablet:text-2xl p-2"
+                            >
+                              <a
+                                href="/pages/profile/index.html"
+                                id=""
+                                class=""
+                              >
+                                <span class="material-symbols-outlined">
+                                  account_circle
+                                </span></a
+                              >
+                              <button type="" class="" id="search-button">
+                                <span class="material-symbols-outlined">
+                                  search
+                                </span>
+                              </button>
+                              <a href="/index.html" id="logout">
+                                <span class="material-symbols-outlined">
+                                  logout
+                                </span>
+                              </a>
+                            </div>
+                            <div
+                              id="insert-profile"
+                              class="flex flex-col gap-2 zero-font-acme text-lg"
+                            ></div>
+                            <div class="flex flex-col gap-2 p-2">
+                              <div
+                                id="navMenu"
+                                class="bg-slate-600 border outline-2 border-slate-500 drop-shadow-lg shadow-black m-auto p-2 rounded-lg w-10/12 text-center"
+                              >
+                                <ul
+                                  class="zero-font-acme text-xl tablet:text-2xl uppercase flex flex-col"
+                                >
+                                  <li class="px-2">
+                                    <a href="./index.html" class="">Home</a>
+                                  </li>
+                                  <li class="px-2">
+                                    <a
+                                      href="/pages/listings/new/index.html"
+                                      class=""
+                                      >Sell</a
+                                    >
+                                  </li>
+                                  <li class="px-2">
+                                    <a href="" class="">Contact</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div
+                                class="flex flex-col gap-2 w-full text-center text-lg"
+                              >
+                                <div id="search-container" class="pt-5 hidden">
+                                  <label for="search"> </label>
+                                  <input
+                                    id="search-function"
+                                    name="search"
+                                    type="search"
+                                    class="focus:outline-none w-10/12"
+                                    placeholder="Search for you next game..."
+                                  />
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- /End replace -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NAV MODAL END -->
       <!-- Section with the profile information -->
       <section class="w-full sm:w-5/6 lg:w-4/5 m-0 p-0">
         <div class="flex flex-row py-4">
