@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="/src/js/api/listings/index.js" type="module" defer></script> -->
+    <script
+      src="/src/js/api/listings/new/index.js"
+      type="module"
+      defer
+    ></script>
+    <script
+      src="/src/js/api/listings/new/newList.js"
+      type="module"
+      defer
+    ></script>
+
+    <meta
+      name="description"
+      content="Zero Bud - Your auction house for all games"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <link href="/src/css/style.css" rel="stylesheet" />
+    <title>Zero Bud | Find your games</title>
+  </head>
+
+  <body class="zero-text-color">
+    <!-- Header -->
+    <header class="h-64 max-h-96 zero-font-niramit">
+      <div class="header-img static h-64 max-h-96">
+        <div
+          class="flex flex-row bg-color-nav h-16 max-h-16 w-full place-content-center fixed top-0 z-10"
+        >
+          <!-- <div class="flex-shrink w-36 m-auto text-center hidden">
+            <p class="zero-font-style-1">ZERO BUD</p>
+          </div>
+          <div class="flex-shrink m-auto inline-flex hidden">
+            <ul class="zero-font-style-1 inline-flex">
+              <li class="px-1">Home</li>
+              <li class="px-1">Products</li>
+              <li class="px-1">About</li>
+              <li class="px-1">Contact</li>
+            </ul>
+            <div class="flex-shrink w-64 m-auto hidden">
+              <input
+                type="search"
+                class="focus:outline-none"
+                placeholder="Search for you next game..."
+              />
+            </div>
+          </div>
+          <div class="flex-shrink w-52 m-auto zero-font-style-1 hidden">
+            <button class="btn-secondary mr-1" id="loginBtn">Log in</button>
+            <button class="btn-primary ml-1" id="registerBtn">Sign UP</button>
+          </div> -->
+          <!-- Navigation section-->
+          <nav
+            class="h-16 zero-text-color w-4/5 m-auto p-0 text-center flex place-content-center static"
+          >
+            <div
+              class="flex-shrink w-40 m-auto zero-font-acme mobile:text-xl tablet:text-2xl"
+            >
+              <span>ZERO BUD</span>
+              <span class="material-symbols-outlined"> home </span>
+            </div>
+            <div class="flex-shrink w-64 m-auto">
+              <input
+                type="search"
+                class="focus:outline-none"
+                placeholder="Search for you next game..."
+              />
+            </div>
+            <div
+              class="bg-slate-600 flex-shrink m-auto absolute top-20 p-2 rounded-lg"
+            >
+              <ul
+                class="zero-font-acme mobile:text-xl tablet:text-2xl uppercase"
+              >
+                <li class="px-2">
+                  <a href="/pages/index.html" class="">Home</a>
+                </li>
+                <li class="px-2"><a href="" class="">Sell</a></li>
+                <li class="px-2"><a href="" class="">Buy</a></li>
+                <li class="px-2"><a href="" class="">Contact</a></li>
+              </ul>
+            </div>
+            <div
+              class="flex-shrink w-52 m-auto zero-font-acme mobile:text-xl tablet:text-2xl"
+            >
+              <span class="material-symbols-outlined"> account_circle </span>
+              <a href="/index.html" id="logout">
+                <span class="material-symbols-outlined"> logout </span>
+              </a>
+              <!--               <button class="btn-secondary mr-1" id="loginBtn">Log in</button>
+              <button class="btn-primary ml-1" id="registerBtn">Sign UP</button> -->
+            </div>
+          </nav>
+        </div>
+        <!-- Header with information text -->
+        <div class="absolute top-40 xl:top-20 left-10">
+          <h1 class="zero-font-ubuntu text-2xl sm:text-4xl uppercase">
+            Welcome to ZERO-BUD
+          </h1>
+          <span class="zero-font-ubunt text-lg pl-8 uppercase"
+            >For gamers By gamers...</span
+          >
+        </div>
+        <div
+          class="bg-slate-700/90 border border-sky-600 sm:w-fit top-52 m-1 md:w-96 rounded-lg absolute md:top-44 md:right-2 lg:right-16 p-4 hidden"
+        >
+          <h1 class="zero-font-ubuntu text-3xl">Find your next game</h1>
+          <span class="zero-font-ubunt text-sm"
+            >Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s.</span
+          >
+        </div>
+      </div>
+    </header>
+    <!-- End of header -->
+    <!-- Main body-->
+
+    <main class="flex flex-col p-3 items-center zero-font-niramit">
+      <!-- New post form -->
+      <section class="w-full sm:w-5/6 lg:w-4/5 m-0 p-0">
+        <div class="flex flex-row py-4">
+          <div class="flex-shrink w-36">
+            <h2 class="text-2xl">New list</h2>
+          </div>
+        </div>
+
+        <div
+          id="profile"
+          class="bg-slate-600 outline outline-1 outline-slate-500 rounded-sm shadow-lg shadow-slate-400/30 p-1 h-auto flex flex-col lg:flex-row gap-2"
+        >
+          <div
+            class="flex-shrink-0 w-10/12 lg:w-1/4 mx-auto my-0 p-2 bg-slate-700 outline outline-1 outline-slate-500 rounded-md items-center"
+          >
+            <!-- Form -->
+            <form id="newlist-form" action="">
+              <div class="flex flex-col gap-2 items-center">
+                <div id="register-message" class=""></div>
+                <div class="flex-1 w-5/6 items-center">
+                  <label for="title"></label>
+                  <input
+                    id="new-title"
+                    name="title"
+                    type="name"
+                    class="focus:outline-none w-full"
+                    placeholder="Title"
+                    required
+                  />
+                </div>
+                <div class="flex-1 w-5/6">
+                  <label for="tag"></label>
+                  <input
+                    id="new-tag"
+                    name="tag"
+                    type="name"
+                    class="focus:outline-none w-full"
+                    placeholder="Tags"
+                    required
+                  />
+                </div>
+                <div class="flex-1 w-5/6">
+                  <label for="url"></label>
+                  <input
+                    id="new-url"
+                    name="url"
+                    type="url"
+                    class="focus:outline-none w-full"
+                    placeholder="Picture"
+                    required
+                  />
+                </div>
+                <div class="flex-1 w-5/6">
+                  <label for="date"></label>
+                  <input
+                    id="new-date"
+                    name="date"
+                    type="datetime-local"
+                    class="focus:outline-none w-full"
+                    placeholder="Picture"
+                    required
+                  />
+                </div>
+                <div class="flex-1 w-5/6">
+                  <label for="description"></label>
+                  <textarea
+                    name="description"
+                    id="new-description"
+                    placeholder="Description"
+                    required
+                  ></textarea>
+                </div>
+                <button
+                  class="btn-secondary mr-1 zero-font-acme mobile:text-xl tablet:text-2xl items-start"
+                  id="post-list"
+                  type="submit"
+                >
+                  Post
+                </button>
+                <div></div>
+              </div>
+            </form>
+            <!-- Form END-->
+          </div>
+          <div class="flex-1 w-64 mobile:w-4/5 mx-auto my-0"></div>
+        </div>
+      </section>
+      <!-- New post form END -->
+      <!-- Section with the profile information -->
+      <section class="w-full sm:w-5/6 lg:w-4/5 m-0 p-0">
+        <div class="flex flex-row py-4">
+          <div class="flex-shrink w-36">
+            <h2 class="text-2xl">Preview</h2>
+          </div>
+        </div>
+        <div
+          id="profile"
+          class="bg-slate-600 outline outline-1 outline-slate-500 rounded-sm shadow-lg shadow-slate-400/30 p-1 h-auto flex flex-col lg:flex-row gap-2"
+        >
+          <!-- Profile card -->
+          <div id="test" class="flex-1 w-64 mobile:w-4/5 mx-auto my-0">
+            <div
+              id="list-images"
+              class="bg-slate-700 outline outline-1 outline-slate-500 rounded-md items-center"
+            ></div>
+            <!-- innerHTML (Media/Images) -->
+            <div
+              id="list-gallery"
+              class="grid grid-cols-3 gap-4 py-2 justify-items-center"
+            >
+              <!-- innerHTML (Media/Images from gallery) -->
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col justify-between">
+            <div
+              id="list-title"
+              class="text-xl underline underline-offset-4 pb-1"
+            >
+              <!-- innerHTML (Title) -->
+            </div>
+            <div id="list-description" class="flex-1">
+              <!-- innerHTML (Description) -->
+            </div>
+            <div id="list-tags" class="order-last italic py-2">
+              <!-- innerHTML (Tags) -->
+            </div>
+          </div>
+          <div class="flex-none w-40 hidden">
+            <div>Add a bid</div>
+            <div>
+              <input
+                id="sliderBid"
+                type="range"
+                min="1"
+                max="1000"
+                value="500"
+              />
+              <div class="flex flex-row gap-2">
+                <div
+                  id="sliderBidValue"
+                  class="range-number zero-font-acme mobile:text-xl tablet:text-2xl"
+                ></div>
+                <div>
+                  <button
+                    class="btn-primary zero-font-acme mobile:text-xl tablet:text-2xl"
+                    value="Send"
+                  >
+                    Bid
+                  </button>
+                </div>
+              </div>
+              <div class="pt-2">Highest bid: 550</div>
+            </div>
+          </div>
+          <!-- Profile card END -->
+        </div>
+      </section>
+      <!-- Section with information about the site -->
+    </main>
+    <!-- End of Main body-->
+    <!-- Footer in the bottom-->
+    <footer class="bg-slate-700/90 h-16 text-center content-center">
+      <div class="m-auto items-center content-center">My footers</div>
+    </footer>
+  </body>
+</html>
