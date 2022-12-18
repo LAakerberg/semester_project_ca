@@ -70,11 +70,11 @@
               <ul
                 class="zero-font-acme mobile:text-xl tablet:text-2xl uppercase"
               >
+                <li class="px-2"><a href="../index.html" class="">Home</a></li>
                 <li class="px-2">
-                  <a href="/pages/index.html" class="">Home</a>
+                  <a href="/pages/listings/new/index.html" class="">Sell</a>
                 </li>
-                <li class="px-2"><a href="" class="">Products</a></li>
-                <li class="px-2"><a href="" class="">About</a></li>
+                <li class="px-2"><a href="" class="">Buy</a></li>
                 <li class="px-2"><a href="" class="">Contact</a></li>
               </ul>
             </div>
@@ -147,17 +147,17 @@
                 To: "opacity-0"
             -->
                   <div
-                    class="absolute top-0 left-0 -ml-8 flex pt-4 pr-2 sm:-ml-10 sm:pr-4"
+                    class="absolute top-0 right-4 flex pt-4 pr-2 sm:pr-4 z-10"
                   >
                     <button
                       id="closeEditModal"
                       type="button"
-                      class="bg-slate-500 hover:bg-slate-800 rounded-md border border-orange-400 text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
+                      class="bg-slate-800 hover:bg-slate-500 rounded-md border border-orange-400 text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
                     >
-                      <span class="sr-only">Close panel</span>
+                      <span class="sr-only text-lg">Close panel</span>
                       <!-- Heroicon name: outline/x-mark -->
                       <svg
-                        class="h-6 w-6"
+                        class="h-10 w-10"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
@@ -302,6 +302,25 @@
         </div>
       </section>
       <!-- Section with information about the site -->
+      <!-- Section for new listing -->
+      <section class="w-full md:w-5/6 lg:w-4/6 m-0 p-0">
+        <div class="flex flex-col sm:flex-row py-4">
+          <div id="newList-form" class="hidden">
+            <div class="flex-shrink w-32 text-center self-center">
+              <h2 class="text-xl uppercase">New list</h2>
+            </div>
+            <div
+              class="flex w-full justify-center sm:justify-end zero-font-acme text-xl xl:text-2xl"
+            >
+              <button class="btn-primary" id="">
+                <span class="material-symbols-outlined text-lg text-black">
+                  add_box </span
+                >close
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- Section with the active listings -->
       <section class="w-full md:w-5/6 lg:w-4/6 m-0 p-0">
         <div class="flex flex-col sm:flex-row py-4">
@@ -311,7 +330,7 @@
           <div
             class="flex w-full justify-center sm:justify-end zero-font-acme text-xl xl:text-2xl"
           >
-            <button class="btn-primary" id="loginBtn">
+            <button class="btn-primary" id="newList">
               <span class="material-symbols-outlined text-lg text-black">
                 add_box </span
               >new listings
