@@ -1,39 +1,64 @@
-export function allBids(sortBids) {
-  const specificBids = document.querySelector('#list-bids');
-  specificBids.innerHTML = ``;
+const queryString = document.location.search;
+const params = new URLSearchParams(queryString);
+const id = params.get('id');
 
-  /*
-  The posts that's is requested from getPosts will be rendered here so the content
-  will be search able. It's will also be adding the posts to the main page.
-  */
+// Message if register is successful or disbanded
+const registerMessage = document.querySelector('#register-message');
 
-  sortBids.forEach(function (requestBids) {
-    const specBids = requestBids.bids;
-    specificBids.innerHTML += `
-        
-        <!-- Product card -->
-        <div
-          class="bg-slate-600 outline outline-1 hover:outline-2 outline-slate-500 rounded-lg w-32 h-20 shadow-lg hover:shadow-slate-400/50">
-            <div class="p-1">Bid by: ${specBids.bidderName}</div>
-            <div class="p-1">Amount: ${specBids.amount}</div>
-        </div>
-        <!-- Product card END -->
-        
-        `;
+// Login form selectors
+const bidForm = document.querySelector('#bid-form');
+const bidValue = document.querySelector('#sliderBid');
+//const bidRegister = document.querySelector('#sliderBid');
+
+import { API_HOST_LISTINGS } from '../../../auth/apiBase.js';
+import { authFetch } from '../../../auth/authFetch.js';
+import { headers } from '../../../auth/authFetch.js';
+import {
+  errorMessage,
+  successMessage,
+} from '../../../../components/message.js';
+
+export function newBid() {
+  bidForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const bidAmountValue = {
+      amount: parseFloat(bidValue.value),
+    };
+
+    console.log(bidValue.value);
+    console.log(bidAmountValue);
+
+    async function newBidRequest(url) {
+      const method = 'POST';
+      try {
+        const response = await authFetch(
+          url,
+          {
+            method,
+            body: JSON.stringify(bidAmountValue),
+          },
+          headers()
+        );
+
+        const json = await response.json(API_HOST_LISTINGS);
+        //const errorLog = json.errors[0].message;
+        console.log(response);
+        console.log(json);
+
+        if (response.ok === true) {
+          registerMessage.innerHTML = successMessage(
+            'Bid was successful, you will be redirected'
+          );
+          //redirect(response);
+        } else {
+          const errorLog = json.errors[0].message;
+          registerMessage.innerHTML = errorMessage(`Error!! ${errorLog}`);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    newBidRequest(API_HOST_LISTINGS + id + '/bids');
   });
 }
-
-/* sortBids.for (let i = 0; i < specificResults.bids.length; i++) {
-    const specBids = specificResults.bids[i];
-    specificBids.innerHTML += `
-    
-    <!-- Product card -->
-    <div
-      class="bg-slate-600 outline outline-1 hover:outline-2 outline-slate-500 rounded-lg w-auto w-32 h-20 shadow-lg hover:shadow-slate-400/50">
-        <div class="p-1">Bid by: ${specBids.bidderName}</div>
-        <div class="p-1">Amount: ${specBids.amount}</div>
-    </div>
-    <!-- Product card END -->
-    
-    `;
-  } */
