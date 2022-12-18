@@ -1,3 +1,5 @@
+import { errorMessage } from './message.js';
+
 // Global functions
 
 /**
@@ -14,11 +16,21 @@ export function redirect(response) {
   }
 }
 
+export function redirectNewList(response) {
+  if (response.ok == true) {
+    setTimeout(() => {
+      window.location.replace(`/pages/profile/`);
+    }, 2000);
+  } else {
+    return errorMessage('Try again');
+  }
+}
+
 export function reloadPage(response) {
   if (response.ok == true) {
     window.location.reload();
   } else {
-    //return errorMessage('');
+    return errorMessage('Try again');
   }
 }
 
