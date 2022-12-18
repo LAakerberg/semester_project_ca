@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "lint": "eslint src/**/*.js",
     "lint-fix": "eslint src/**/*.js --cache --fix",
-    "format": "prettier -w src/**/*.js && prettier -w index.html",
+    "format": "prettier -w src/**/*.js && prettier -w pages/**/*index.html",
     "prepare": "husky install"
   },
   "devDependencies": {
