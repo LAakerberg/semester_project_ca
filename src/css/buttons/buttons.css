@@ -33,6 +33,16 @@
   transition: 0.5s;
 }
 
+a {
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+a:hover {
+  text-shadow: 0 0 20px #de600b;
+  transition: 0.5s;
+}
+
 @layer components {
   .range-number {
     background-color: #21374d;

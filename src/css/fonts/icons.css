@@ -12,6 +12,15 @@
 }
 
 @layer base {
+  .menu {
+    font-size: 20px;
+    color: #b8b8b8;
+    transition: 0.4s;
+    padding: 0px 0px;
+  }
+}
+
+@layer base {
   .material-symbols-outlined:hover {
     text-decoration: underline;
     color: #e6e6e6;
