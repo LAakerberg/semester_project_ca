@@ -43,8 +43,6 @@
     "didyoumean": "^1.2.2",
     "dlv": "^1.1.3",
     "electron-to-chromium": "^1.4.284",
-    "esbuild": "^0.15.15",
-    "esbuild-windows-64": "^0.15.15",
     "escalade": "^3.1.1",
     "fast-glob": "^3.2.12",
     "fastq": "^1.13.0",
