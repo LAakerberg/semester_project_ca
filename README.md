@@ -21,7 +21,7 @@ Step-by-step how to install a location version of this repo
 
 # Building
 
-The site is running on Tailwind CSS and POST CSS
+The site is running on Tailwind CSS
 
 - HTML
 - CSS
