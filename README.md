@@ -12,15 +12,43 @@ This is a auction house for gamers where they can bid on different products for 
 
 # Installation
 
+Step-by-step how to install a location version of this repo
+
 - Clone the repository
-- Run `npm install`
-- Run `npm run build`
-- Run `npm run dev = gives you live view`
-- The site is running on Tailwind CSS and POST CSS
+- Run `npm install` for installation of dependencies
+- Run `npm run build` for production build
+- Run `npm run dev` for development server locally
+
+# Building
+
+The site is running on Tailwind CSS
+
+- HTML
+- CSS
+- TailwindCSS
+- JavaScript
+- Vite.js
 
 # Tech stack used in the project
 
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=flat&logo=css3&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=flat&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E) ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-%231572B6.svg?style=flat&logo=tailwindcss&logoColor=white) ![Prettier](https://img.shields.io/badge/Prettier-1A2B34?style=flat&logo=prettier&logoColor=white) ![ESLint](https://img.shields.io/badge/ESLint-101828?style=flat&logo=eslint&logoColor=white)
+[![Tech stack](https://skillicons.dev/icons?i=html,css,js,tailwindcss,vite)](https://skillicons.dev)
+
+# Netlify production
+
+## Badges
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0a04ee40-28ed-41d5-8447-94ae83fc6cf0/deploy-status)](https://app.netlify.com/sites/dapper-dusk-087efd/deploys)
+
+## Live demo
+
+[Zero Bud Action house](https://dapper-dusk-087efd.netlify.app/)
+
+# Contact
+
+Contact me on my social media
+
+[![My socialMedia](https://skillicons.dev/icons?i=github)](https://github.com/LAakerberg)
+[![My socialMedia](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/in/linus-%C3%A5kerberg-4126891b1/)
 
 # Project / CA requirement's
 
