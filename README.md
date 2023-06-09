@@ -10,6 +10,11 @@ This is a auction house for gamers where they can bid on different products for 
   - Prettier is running automatic on commit's.
   - Eslint is running automatic on commit's.
 
+## Image
+
+![zeroBudScreenshotHigh](https://github.com/LAakerberg/semester_project_ca/assets/44141432/93dfb7fa-1427-4155-89b9-92572c424442)
+
+
 # Installation
 
 Step-by-step how to install a location version of this repo
