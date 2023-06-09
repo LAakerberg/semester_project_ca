@@ -68,6 +68,6 @@ Contact me on my social media
 ## The following technical restrictions:
 
     1. [x] Must use an approved CSS Framework
-    2. [Fail] Must be hosted on an approved Static Host
+    2. [x] Must be hosted on an approved Static Host
     3. [x] Must use an approved Design Application
     3. [x] Must use an approved Planning Application
